@@ -60,9 +60,12 @@
             >
             <com.skydoves.powerspinner.PowerSpinnerView
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="60dp"
                 android:hint="Country Code"
+                android:background="@android:color/holo_blue_dark"
                 android:gravity="center"
+                android:textColorHint="@color/white"
+                android:textSize="18sp"
                 android:textAlignment="center"
                 android:layout_weight="2"
                 app:spinner_arrow_gravity="end"
@@ -77,15 +80,29 @@
                 android:id="@+id/signUpg_text_phone"
                 android:layout_width="0dp"
                 android:layout_weight="4"
-                android:layout_height="wrap_content"
+                android:layout_height="60dp"
                 android:layout_marginTop="20dp"
-                android:hint="Password">
+                android:hint="Phone Number">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:inputType="textPassword" />
+                    android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
         </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/agreement"
+            android:textSize="18sp"
+            android:padding="8dp"
+            android:layout_marginTop="8dp"
+            />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:paddingVertical="5dp"
+            />
     </LinearLayout>
 </RelativeLayout>
