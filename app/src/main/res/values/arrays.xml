@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="countryCodes">
-
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Bangladesh</item>
+        <item>Belarus</item>
     </string-array>
 </resources>
