@@ -91,9 +91,11 @@
             />
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
             android:text="Submit"
             android:paddingVertical="5dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
             />
     </LinearLayout>
 </RelativeLayout>

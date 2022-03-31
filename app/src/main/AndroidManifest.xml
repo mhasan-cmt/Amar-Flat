@@ -10,10 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AmarFlat">
         <activity
-            android:label="Create an Account"
-            android:parentActivityName=".MainActivity"
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Create an Account"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,9 +28,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
