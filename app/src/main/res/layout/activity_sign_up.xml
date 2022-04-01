@@ -12,6 +12,11 @@
         android:layout_marginVertical="20dp"
         android:layout_marginHorizontal="18dp"
         android:orientation="vertical">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="language"
+            />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/signUpg_text_name"
