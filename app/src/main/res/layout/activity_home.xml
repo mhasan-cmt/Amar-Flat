@@ -16,22 +16,38 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
-        >
-
-        <FrameLayout
-            android:id="@+id/home_fragment_container"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </com.google.android.material.navigation.NavigationView>
+        />
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:elevation="5dp"
+                android:background="@color/primary"
+                android:layout_width="match_parent"
+                app:title="@string/app_name"
+                app:titleTextColor="@color/black"
+                android:layout_height="?attr/actionBarSize"/>
+
+        </com.google.android.material.appbar.AppBarLayout>
+            <FrameLayout
+                android:id="@+id/home_fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@id/navView"
+                />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navView"
             android:layout_width="match_parent"
             android:layout_height="60dp"
+            android:background="@android:color/background_dark"
             android:layout_alignParentBottom="true"
             app:menu="@menu/bottom_nav" />
     </RelativeLayout>

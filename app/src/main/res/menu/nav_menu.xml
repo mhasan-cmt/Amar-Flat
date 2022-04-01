@@ -25,7 +25,7 @@
             android:title="Contact us"
             android:icon="@drawable/ic_contact"
             />
-        <item android:id="nav_language"
+        <item android:id="@+id/nav_language"
             android:title="Language en"
             android:icon="@drawable/ic_language"
             />
