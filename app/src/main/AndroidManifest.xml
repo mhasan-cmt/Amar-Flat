@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AmarFlat">
         <activity
+            android:name=".SearchResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PostAd"
+            android:exported="false" />
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
+            <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
@@ -23,12 +35,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
     </application>
 
 </manifest>
