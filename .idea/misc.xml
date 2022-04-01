@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+<<<<<<< HEAD
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/back_arrow.xml" value="0.1395" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/background_button.xml" value="0.1395" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/bottom_border.xml" value="0.1395" />
@@ -25,6 +26,10 @@
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/post_ad_photo_view.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/single_post.xml" value="0.22" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/menu/bottom_nav.xml" value="0.20416666666666666" />
+=======
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+>>>>>>> 169278c2375ea50a909533fa99aeb67329fcecb5
       </map>
     </option>
   </component>

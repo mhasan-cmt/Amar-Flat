@@ -16,16 +16,19 @@
             android:name=".PostAd"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
-            android:exported="false"
-            android:label="Create an Account"
-            android:parentActivityName=".MainActivity" />
-        <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"/>
+            <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true"
+            android:label="Create an Account"
+            android:parentActivityName=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
