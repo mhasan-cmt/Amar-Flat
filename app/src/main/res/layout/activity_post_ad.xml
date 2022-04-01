@@ -940,6 +940,7 @@
             android:layout_height="wrap_content"
             android:background="@color/primary"
             android:text="Post Ad"
+            android:textColor="@color/black"
             android:onClick="postAd"/>
     </LinearLayout>
 

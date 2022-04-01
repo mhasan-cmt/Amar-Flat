@@ -3,33 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-<<<<<<< HEAD
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/back_arrow.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/background_button.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/bottom_border.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/favorite_icon.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/home_icon.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/home_outline.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/profile_fill.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/profile_icon.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/project_icon.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/radio_background.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/radio_color.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/top_border.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/transparent_button.xml" value="0.1395" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_post_ad.xml" value="0.33" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_search_result.xml" value="0.25" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/post_ad_photo_view.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/single_post.xml" value="0.22" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/menu/bottom_nav.xml" value="0.20416666666666666" />
-=======
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/background_button.xml" value="0.1775" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/home_icon.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/radio_background.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_post_ad.xml" value="0.22" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
->>>>>>> 169278c2375ea50a909533fa99aeb67329fcecb5
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/nav_header.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/single_post.xml" value="0.5" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/menu/nav_menu.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
