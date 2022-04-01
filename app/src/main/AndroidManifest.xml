@@ -10,10 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AmarFlat">
         <activity
-            android:label="Create an Account"
-            android:parentActivityName=".MainActivity"
-            android:name=".SignUpActivity"
+            android:name=".SearchResultActivity"
             android:exported="false" />
+        <activity
+            android:name=".PostAd"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false"
+            android:label="Create an Account"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
