@@ -1,4 +1,4 @@
-package com.teamphoenix.amarflat.Home_Fragment;
+package com.teamphoenix.amarflat.Fragment;
 
 import android.os.Bundle;
 

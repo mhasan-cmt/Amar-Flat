@@ -1,4 +1,4 @@
-package com.teamphoenix.amarflat.Profile_Fragment;
+package com.teamphoenix.amarflat.Fragment;
 
 import android.os.Bundle;
 
@@ -10,14 +10,11 @@ import android.view.ViewGroup;
 
 import com.teamphoenix.amarflat.R;
 
+public class ProjectsFragment extends Fragment {
 
-public class ProfileFragment extends Fragment {
-
-    public ProfileFragment() {
+    public ProjectsFragment() {
         // Required empty public constructor
     }
-
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +24,6 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        return inflater.inflate(R.layout.fragment_projects, container, false);
     }
 }

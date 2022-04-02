@@ -34,7 +34,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:id="@+id/email"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/signUpg_text_password"
@@ -47,7 +48,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:id="@+id/password"/>
         </com.google.android.material.textfield.TextInputLayout>
         <Button
             android:textColor="@color/black"
@@ -55,6 +57,7 @@
             android:layout_height="60dp"
             android:text="Log In"
             android:textSize="18sp"
+            android:onClick="login"
             />
     </LinearLayout>
     <LinearLayout
@@ -77,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Sign Up Now"
-            android:textSize="18sp"/>
+            android:textSize="18sp"
+            android:onClick="signUp"/>
     </LinearLayout>
 </RelativeLayout>
