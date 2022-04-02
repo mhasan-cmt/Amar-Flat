@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/background_button.xml" value="0.1775" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/home_icon.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/radio_background.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/switch_thumb.xml" value="0.1775" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/switch_thumb_on.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/switch_track.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/swithc_thumb.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/thumb_off.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/font/poppins.xml" value="0.21944444444444444" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout-w1240dp/content_test.xml" value="0.25" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout-w600dp/content_test.xml" value="0.3182291666666667" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_main.xml" value="0.17685185185185184" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_post_ad.xml" value="0.22" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_search_filter.xml" value="0.25" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_search_result.xml" value="0.3537037037037037" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_sign_up.xml" value="0.25" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/backlayer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/content_test.xml" value="0.18" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/custom_bottom_sheet.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/frontlayer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/nav_header.xml" value="0.22" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/single_post.xml" value="0.5" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/menu/bottom_nav.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/menu/filter_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/menu/nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1185" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

@@ -40,7 +40,13 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    // https://mvnrepository.com/artifact/org.florescu.android.rangeseekbar/rangeseekbar-library
+    implementation 'org.florescu.android.rangeseekbar:rangeseekbar-library:0.4.0'
+    // https://mvnrepository.com/artifact/com.hbb20/CountryCodePicker
+    implementation 'io.michaelrocks:libphonenumber-android:8.12.46'
+    implementation 'com.hbb20:CountryCodePicker:2.4.7'
 
-    //volley
+
+
 
 }
