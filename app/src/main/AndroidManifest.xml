@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AmarFlat">
         <activity
+            android:name=".SearchFilterActivity"
+            android:exported="false" />
+        <activity
             android:name=".SearchResultActivity"
             android:exported="false" />
         <activity
@@ -20,8 +23,8 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
-            <activity
+            android:exported="true" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
