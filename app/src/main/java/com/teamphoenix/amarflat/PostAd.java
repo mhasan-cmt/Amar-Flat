@@ -4,12 +4,15 @@ import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,10 +21,19 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.teamphoenix.amarflat.Adapter.PostAdPhotoViewRecycler;
 import com.teamphoenix.amarflat.databinding.ActivityPostAdBinding;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class PostAd extends AppCompatActivity {
 
@@ -32,6 +44,8 @@ public class PostAd extends AppCompatActivity {
     Bitmap bitmap;
     RecyclerView imageRecyclerView;
     ArrayList<Uri> postAdImageList;
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
     private ActivityPostAdBinding postAdBinding;
 
     @Override
@@ -44,6 +58,8 @@ public class PostAd extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         postAdBinding = ActivityPostAdBinding.inflate(getLayoutInflater());
         setContentView(postAdBinding.getRoot());
+        preferences = getSharedPreferences("user_data",MODE_PRIVATE);
+        editor = preferences.edit();
 
 
         postAdBinding.postAddToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -90,6 +106,7 @@ public class PostAd extends AppCompatActivity {
     }
 
     public void postAd(View view) {
+        
     }
 
     public void picAdd(View view) {

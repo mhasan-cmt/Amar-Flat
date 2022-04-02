@@ -90,6 +90,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:checked="true"
+                            android:paddingVertical="5dp"
                             android:paddingHorizontal="20dp"
                             android:text="Sell"
                             android:textAlignment="center"
@@ -100,6 +101,7 @@
                             android:layout_width="80dp"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:paddingVertical="5dp"
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="Rent"
@@ -363,7 +365,7 @@
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="32dp"
+                            android:layout_height="match_parent"
                             android:padding="10dp"
                             android:src="@drawable/bedroom" />
                     </androidx.cardview.widget.CardView>
@@ -398,6 +400,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="1"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -409,6 +412,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="2"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -420,6 +424,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="3"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -431,6 +436,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="4"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -442,6 +448,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="5 +"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
                     </RadioGroup>
@@ -502,6 +509,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="1"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -513,6 +521,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="2"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -524,6 +533,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="3"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -535,6 +545,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="4"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -546,6 +557,7 @@
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
                             android:text="5 +"
+                            android:padding="10dp"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
                     </RadioGroup>

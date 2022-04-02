@@ -3,14 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/menu.xml" value="0.1" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/drawable/radio_background.xml" value="0.1395" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_contact_us.xml" value="0.22" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_post_ad.xml" value="0.22" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_profile_setting.xml" value="0.25" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_favorites.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/background_button.xml" value="0.1775" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/home_icon.xml" value="0.1185" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/radio_background.xml" value="0.1185" />
-        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/font/poppins.xml" value="0.21944444444444444" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_post_ad.xml" value="0.22" />
+<<<<<<< HEAD
+=======
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_search_result.xml" value="0.25" />
+>>>>>>> f4eaeee46ebe987bcbbceec88abc4d285a93ed90
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/nav_header.xml" value="0.22" />

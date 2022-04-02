@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".HomeActivity">
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,14 +24,14 @@
                 app:expandedTitleMarginBottom="28dp"
                 app:expandedTitleMarginStart="72dp"
                 app:expandedTitleTextAppearance="@style/TextAppearance.App.CollapsingToolbar.Expanded">
-
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:contentDescription="@string/app_name"
                     android:fitsSystemWindows="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/toolbar_bg" />
+                    android:src="@drawable/toolbar_bg"
+                    android:id="@+id/imageTitle"/>
 
                 <com.google.android.material.appbar.MaterialToolbar
                     android:id="@+id/main_toolbar"
