@@ -22,6 +22,9 @@ import com.teamphoenix.amarflat.databinding.ActivitySignUpBinding;
 import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
+import com.teamphoenix.amarflat.util.LanguageUtil;
+
+import java.util.Locale;
 
 public class SignUpActivity extends AppCompatActivity {
     ActivitySignUpBinding signUpBinding;
