@@ -9,7 +9,6 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginBottom="12dp"
         android:background="@color/primary">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -21,40 +20,236 @@
             app:titleTextColor="@color/black" />
 
     </com.google.android.material.appbar.AppBarLayout>
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/appbar"
-        android:paddingHorizontal="20dp"
-        android:orientation="vertical">
-        <com.google.android.material.textfield.TextInputLayout
+        android:layout_below="@+id/appbar">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primary_transparent">
-            <EditText
+            android:orientation="vertical"
+            android:paddingVertical="20dp">
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Name"
-                android:text="asdf"
-                android:id="@+id/name"/>
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:paddingVertical="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="10dp"
+                        android:text="Ask Us Anything"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/primary"
-            android:onClick="updateProfile"
-            android:text="Update Profile"
-            android:textColor="@color/black" />
-    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="We at amarflat.com are open to any and all inquiries and suggestions you may have. The occasional hilarious joke wouldn't be entrirely amiss either."
+                        />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="7dp"
+                    android:hint="Name"
+                    android:singleLine="true" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="7dp"
+                    android:hint="Email"
+                    android:singleLine="true" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="7dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="6">
+
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="2"
+                        android:background="@android:color/holo_blue_dark"
+                        android:textColorHint="@color/white"
+                        android:textSize="18sp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/signUpg_text_phone"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="4"
+                        android:hint="Phone Number">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:inputType="number"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="7dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bottom_border"
+                        android:hint="Your Message"
+                        android:id="@+id/message"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="messageSend"
+                    android:text="Send"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginVertical="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="10dp"
+                        android:text="GIVE US A CALL"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Feel free to give us jingle on the following number."/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Shafin"
+                        android:textAllCaps="true"
+                        android:layout_marginVertical="10dp"
+                        android:textSize="17dp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="019XXXXXXXX"
+                        android:textColor="@color/primary"
+                        android:paddingVertical="6dp"
+                        android:textAlignment="center"
+                        android:textSize="17dp"
+                        android:background="@drawable/transparent_button"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Mahamudul"
+                        android:textAllCaps="true"
+                        android:layout_marginVertical="10dp"
+                        android:textSize="17dp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="018XXXXXXXX"
+                        android:textColor="@color/primary"
+                        android:paddingVertical="6dp"
+                        android:textAlignment="center"
+                        android:textSize="17dp"
+                        android:background="@drawable/transparent_button"/>
+                </LinearLayout>
+            </LinearLayout>
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginVertical="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="20dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="10dp"
+                        android:text="Meet With US"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="We encourage you to come down and visit us because as much as we love phones and computers, we don't think they can ever be as awesome as we are in person."/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Feni Office"
+                        android:textAllCaps="true"
+                        android:layout_marginTop="20dp"
+                        android:textStyle="bold"
+                        android:textSize="17dp"
+                        android:textColor="@color/primary"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Feni, Chitagong \n Bangladesh"
+                        android:paddingVertical="6dp"
+                        android:textAlignment="center"
+                        android:textSize="17dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>

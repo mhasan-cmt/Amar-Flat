@@ -5,14 +5,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class ContactUsActivity extends AppCompatActivity {
+import com.teamphoenix.amarflat.databinding.ActivityContactUsBinding;
 
+public class ContactUsActivity extends AppCompatActivity {
+    ActivityContactUsBinding contactUsBinding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_contact_us);
+        contactUsBinding = ActivityContactUsBinding.inflate(getLayoutInflater());
+        setContentView(contactUsBinding.getRoot());
+
+        contactUsBinding.postAddToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+
     }
 
     public void updateProfile(View view) {
+    }
+
+    public void messageSend(View view) {
     }
 }

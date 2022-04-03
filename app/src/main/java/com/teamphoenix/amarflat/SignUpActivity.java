@@ -24,6 +24,10 @@ import java.util.HashMap;
 import java.util.Map;
 import com.teamphoenix.amarflat.util.LanguageUtil;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.Locale;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -54,17 +58,27 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 dialog.dismiss();
-                Toast.makeText(SignUpActivity.this, response, Toast.LENGTH_SHORT).show();
-                if (response.equals("Yes")){
-                    editor.putString("user_name",signUpBinding.name.getText().toString());
-                    editor.putString("email",signUpBinding.email.getText().toString());
-                    editor.putString("password",signUpBinding.password.getText().toString());
-                    editor.putString("phone",signUpBinding.phone.getText().toString());
-                    editor.commit();
+                if (response.equals("No")){
+                    Toast.makeText(SignUpActivity.this, "Something Wrong", Toast.LENGTH_SHORT).show();
+                }else if(response.equals("Input Blank")){
+                    Toast.makeText(SignUpActivity.this, response, Toast.LENGTH_SHORT).show();
+                }else if(response.equals("Email Already Taken")){
+                    Toast.makeText(SignUpActivity.this, response, Toast.LENGTH_SHORT).show();
+                }else{
+                    try {
+                        JSONArray jsonArray = new JSONArray(response);
+                        JSONObject jsonObject = jsonArray.getJSONObject(0);
+                        editor.putString("user_id",jsonObject.getString("user_id"));
+                        editor.putString("user_name",jsonObject.getString("user_name"));
+                        editor.putString("email",jsonObject.getString("email"));
+                        editor.putString("password",jsonObject.getString("password"));
+                        editor.putString("phone",jsonObject.getString("phone"));
+                        editor.commit();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                     startActivity(new Intent(getApplicationContext(),HomeActivity.class));
                     finish();
-                }else{
-                    Toast.makeText(SignUpActivity.this, "Something Wrong", Toast.LENGTH_SHORT).show();
                 }
             }
         }, new Response.ErrorListener() {
