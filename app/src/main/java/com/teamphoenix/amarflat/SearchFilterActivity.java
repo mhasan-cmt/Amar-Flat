@@ -29,6 +29,12 @@ public class SearchFilterActivity extends AppCompatActivity {
                 startActivity(new Intent(SearchFilterActivity.this, MapsActivity.class));
             }
         });
+        searchFilterBinding.searchCity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SearchFilterActivity.this, CityActivity.class));
+            }
+        });
 
     }
 
