@@ -2,11 +2,15 @@ package com.teamphoenix.amarflat;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.teamphoenix.amarflat.databinding.ActivitySearchFilterBinding;
 
 import org.florescu.android.rangeseekbar.RangeSeekBar;
+
+import java.util.Map;
 
 public class SearchFilterActivity extends AppCompatActivity {
 
@@ -18,6 +22,13 @@ public class SearchFilterActivity extends AppCompatActivity {
         searchFilterBinding = ActivitySearchFilterBinding.inflate(getLayoutInflater());
         setContentView(searchFilterBinding.getRoot());
         settingUpRangeSeekbars();
+
+        searchFilterBinding.searchBtnOpenMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SearchFilterActivity.this, MapsActivity.class));
+            }
+        });
 
     }
 
