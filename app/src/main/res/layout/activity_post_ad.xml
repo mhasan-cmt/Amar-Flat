@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     tools:context=".PostAd">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -65,7 +64,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Purpose"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -141,7 +139,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Select Property Type"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -186,7 +183,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Select Location"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -231,7 +227,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Area Size"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -311,7 +306,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Total Price"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -375,7 +369,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Bedrooms"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -484,7 +477,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Bathrooms"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -594,7 +586,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Property Title"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -658,7 +649,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Property Description"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -722,7 +712,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Property Features"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -777,7 +766,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Upload images of your property"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -845,7 +833,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Email Address"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -909,7 +896,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Contact Number"
-                        android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
 
