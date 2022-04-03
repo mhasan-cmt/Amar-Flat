@@ -106,7 +106,84 @@ public class PostAd extends AppCompatActivity {
     }
 
     public void postAd(View view) {
-        
+        //dialog create
+        ProgressDialog dialog = new ProgressDialog(this);
+        dialog.setMessage("Loading...");
+        dialog.setCancelable(false);
+
+        //dialog show
+        dialog.show();
+
+
+
+        Toast.makeText(this, Integer.toString(postAdBinding.bathroomRadio.getCheckedRadioButtonId()), Toast.LENGTH_SHORT).show();
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://sloppy-mattress.000webhostapp.com/API/postAd.php", new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                dialog.dismiss();
+                Toast.makeText(PostAd.this, response, Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                dialog.dismiss();
+                Toast.makeText(PostAd.this, error.toString(), Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> perms = new HashMap<>();
+                perms.put("title",postAdBinding.propertyTitle.getText().toString());
+                perms.put("location","Location");
+                perms.put("area_size",postAdBinding.areaSize.getText().toString()+size_type.getSelectedItem().toString());
+                perms.put("bedrooms",getBedroom());
+                perms.put("bathrooms",getBathroom());
+                perms.put("description",postAdBinding.propertyDescription.getText().toString());
+                perms.put("property_type","Flat");
+                perms.put("purpose",getPurpose());
+                perms.put("total_price",postAdBinding.totalPrice.getText().toString());
+                perms.put("email",postAdBinding.email.getText().toString());
+                perms.put("phone",postAdBinding.phone.getText().toString());
+                perms.put("user_id",preferences.getString("user_id","0"));
+                return perms;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+    }
+
+    private String getPurpose() {
+        if(postAdBinding.purposeRent.isChecked())
+            return "Rent";
+        else if(postAdBinding.purposeSell.isChecked())
+            return "Sell";
+        return "0";
+    }
+
+    private String getBathroom() {
+        if(postAdBinding.bathroom1.isChecked())
+            return "1";
+        else if(postAdBinding.bathroom2.isChecked())
+            return "2";
+        else if(postAdBinding.bathroom3.isChecked())
+            return "3";
+        else if(postAdBinding.bathroom4.isChecked())
+            return "4";
+        return "0";
+    }
+
+    private String getBedroom() {
+        if(postAdBinding.bedroom1.isChecked())
+            return "1";
+        else if(postAdBinding.bedroom2.isChecked())
+            return "2";
+        else if(postAdBinding.bedroom3.isChecked())
+            return "3";
+        else if(postAdBinding.bedroom4.isChecked())
+            return "4";
+        return "0";
     }
 
     public void picAdd(View view) {
