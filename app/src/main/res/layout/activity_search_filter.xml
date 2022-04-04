@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFilterActivity">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:id="@+id/search_app_bar"
+        >
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/search_material_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:title="Filters"
+            app:navigationIcon="@drawable/back_arrow"
+            app:menu="@menu/filter_menu"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/search_btn_container"
+        android:layout_below="@id/search_app_bar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="10dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:drawableStart="@drawable/ic_baseline_check_circle_outline_24"
+                        android:drawablePadding="15dp"
+                        android:drawableTint="@color/black"
+                        android:gravity="center_vertical"
+                        android:paddingStart="8dp"
+                        android:text="I want to"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/search_switch_user_want"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="10dp"
+                        android:textOff="Buy"
+                        android:textOn="Rent"
+                        android:thumb="@drawable/switch_thumb"
+                        app:showText="true"
+                        app:track="@drawable/switch_track"
+                        app:useMaterialThemeColors="false" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/search_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="20dp"
+                        android:paddingStart="8dp"
+                        android:text="City"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableEndCompat="@drawable/ic_baseline_arrow_forward"
+                        app:drawableStartCompat="@drawable/location"
+                        app:drawableTint="@color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@color/white_gray" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="20dp"
+                            android:paddingStart="8dp"
+                            android:text="Select Location"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_baseline_map_24"
+                            app:drawableTint="@color/black" />
+
+                        <Button
+                            android:id="@+id/search_btn_open_map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:drawableLeft="@drawable/ic_baseline_map_24"
+                            android:paddingVertical="8dp"
+                            android:text="Open Map"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp"
+                        android:paddingStart="8dp"
+                        android:text="Price Range"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/favorite_icon"
+                        app:drawableTint="@color/black" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:weightSum="7"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <EditText
+                            android:id="@+id/search_seekbar_min_value"
+                            android:background="@color/white_gray"
+                            android:textColor="@color/black"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:hint="0"
+                            android:textColorHint="@color/black"
+                            android:padding="8dp"
+                            android:textSize="15sp"
+                            android:inputType="numberDecimal"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="To"
+                            android:gravity="center"
+                            android:textSize="22sp"
+                            android:textStyle="bold"/>
+                        <EditText
+                            android:id="@+id/search_seekbar_max_value"
+                            android:background="@color/white_gray"
+                            android:textColor="@color/black"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:hint="Any"
+                            android:textSize="15sp"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/black"
+                            android:padding="8dp"
+                            />
+                    </LinearLayout>
+                    <org.florescu.android.rangeseekbar.RangeSeekBar
+                        android:id="@+id/search_price_rangeSeekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:absoluteMaxValue="10000000"
+                        app:showLabels="false"
+                        app:valuesAboveThumbs="false"
+                        app:barHeight="5dp"
+                        app:activeColor="@color/primary"
+                        app:defaultColor="@color/white_gray"
+                        android:layout_marginHorizontal="25dp"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp"
+                        android:paddingStart="8dp"
+                        android:text="Area Range"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/favorite_icon"
+                        app:drawableTint="@color/black" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:weightSum="7"
+                        android:layout_marginBottom="10dp"
+                        >
+                        <EditText
+                            android:id="@+id/search_seekbar_area_min_value"
+                            android:background="@color/white_gray"
+                            android:textColor="@color/black"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:hint="0"
+                            android:textColorHint="@color/black"
+                            android:padding="8dp"
+                            android:textSize="15sp"
+                            android:inputType="numberDecimal"
+                            />
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="To"
+                            android:gravity="center"
+                            android:textSize="22sp"
+                            android:textStyle="bold"/>
+                        <EditText
+                            android:id="@+id/search_seekbar_area_max_value"
+                            android:background="@color/white_gray"
+                            android:textColor="@color/black"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:hint="Any"
+                            android:textSize="15sp"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/black"
+                            android:padding="8dp"
+                            />
+                    </LinearLayout>
+                    <org.florescu.android.rangeseekbar.RangeSeekBar
+                        android:id="@+id/search_area_rangeSeekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:absoluteMaxValue="10000000"
+                        app:showLabels="false"
+                        app:valuesAboveThumbs="false"
+                        android:layout_marginHorizontal="25dp"
+                        app:barHeight="5dp"
+                        app:defaultColor="@color/white_gray"
+                        app:activeColor="@color/primary"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_margin="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardBackgroundColor="@color/primary"
+                            app:cardCornerRadius="20dp"
+                            android:layout_margin="5dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/bedroom" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="Bedrooms"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp">
+
+                        <RadioGroup
+                            android:id="@+id/bedroomRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/bedroom1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="1"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bedroom2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="2"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bedroom3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="3"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bedroom4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="4"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bedroom5More"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="5 +"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            app:cardBackgroundColor="@color/primary"
+                            app:cardCornerRadius="20dp"
+                            android:layout_margin="5dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/bathroom" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="Bathrooms"
+                            android:textColor="@color/black"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:background="@drawable/bottom_border"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp">
+
+                        <RadioGroup
+                            android:id="@+id/bathroomRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/bathroom1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="1"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bathroom2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="2"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bathroom3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="3"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bathroom4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="4"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bathroom5More"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:text="5 +"
+                                android:padding="10dp"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <LinearLayout
+        android:id="@+id/search_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:elevation="5dp"
+        android:gravity="end|center_vertical"
+        android:background="#72DDDDDD"
+        >
+        <Button
+            android:id="@+id/search_btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="Reset"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            />
+        <Button
+            android:id="@+id/search_btn_show_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="Show 64 ads"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

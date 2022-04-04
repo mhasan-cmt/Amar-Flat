@@ -68,14 +68,15 @@
                 android:weightSum="6"
                 android:layout_marginTop="15dp"
                 >
-                <Spinner
+                <com.hbb20.CountryCodePicker
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:background="@android:color/holo_blue_dark"
-                    android:textColorHint="@color/white"
-                    android:textSize="18sp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="2"/>
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    app:ccpDialog_textColor="@color/white"
+                    app:ccp_arrowColor="@color/white"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:id="@+id/ccp"/>
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/signUpg_text_phone"
                     android:layout_width="0dp"
@@ -124,7 +125,7 @@
                 android:text="OR"
                 android:textStyle="bold"
                 android:textSize="28sp"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textAlignment="center"/>
             <Button
                 android:textColor="@color/black"
