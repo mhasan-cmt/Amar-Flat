@@ -2,6 +2,8 @@ package com.teamphoenix.amarflat;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -39,6 +41,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     private FusedLocationProviderClient fusedLocationClient;
+    private Marker currentMarker = null;
+    private String locationString = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +62,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+        binding.mapDoneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(locationString.equals("") | locationString.isEmpty()){
+                    Toast.makeText(MapsActivity.this, "Search for a location First!", Toast.LENGTH_SHORT).show();
+                }else{
+                    sendSelectedLocation(locationString.toUpperCase());
+                }
             }
         });
     }
@@ -83,28 +98,37 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         binding.searchLocation.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
+                ProgressDialog progressDialog = new ProgressDialog(MapsActivity.this);
+                progressDialog.setTitle("Please wait");
+                progressDialog.setMessage("Searching for your location");
+                progressDialog.setCanceledOnTouchOutside(false);
+                progressDialog.setCancelable(false);
+                progressDialog.show();
                 String locationInput = binding.searchLocation.getQuery().toString();
                 List<Address> addresses = null;
 
                 if (locationInput != null || !locationInput.equals("")) {
                     Geocoder geocoder = new Geocoder(MapsActivity.this);
                     try {
+                        progressDialog.dismiss();
                         addresses = geocoder.getFromLocationName(locationInput, 1);
-                    } catch (IOException e) {
-                        Toast.makeText(MapsActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                    Address address = addresses.get(0);
-                    LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
-                    Marker currentMarker = null;
-                    if (currentMarker != null) {
-                        currentMarker.remove();
-                        currentMarker = null;
-                    }
 
-                    if (currentMarker == null) {
-                        currentMarker = mMap.addMarker(new MarkerOptions().position(latLng).
-                                icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
-                        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+                        Address address = addresses.get(0);
+                        locationString =s.trim();
+                        LatLng latLng = new LatLng(address.getLatitude(), address.getLongitude());
+                        if (currentMarker != null) {
+                            currentMarker.remove();
+                            currentMarker = null;
+                        }
+
+                        if (currentMarker == null) {
+                            currentMarker = mMap.addMarker(new MarkerOptions().position(latLng).
+                                    icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+                            mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+                        }
+                    } catch (IOException e) {
+                        progressDialog.dismiss();
+                        Toast.makeText(MapsActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 }
                 return false;
@@ -144,7 +168,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     mMap.getUiSettings().setMapToolbarEnabled(true);
                                     mMap.getUiSettings().setAllGesturesEnabled(true);
                                     mMap.getUiSettings().setMyLocationButtonEnabled(true);
-                                    mMap.addMarker(new MarkerOptions().position(currentLocation).title("Current Location!"));
+                                    currentMarker = mMap.addMarker(new MarkerOptions().position(currentLocation).title("Current Location!"));
                                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(currentLocation, 16));
                                 } else {
                                     Toast.makeText(MapsActivity.this, "Cant Find any location!", Toast.LENGTH_SHORT).show();
@@ -158,5 +182,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         permissionToken.continuePermissionRequest();
                     }
                 }).check();
+    }
+
+    public void sendSelectedLocation(String location) {
+        Intent returnIntent = new Intent(MapsActivity.this, SearchFilterActivity.class);
+        returnIntent.putExtra("CityName", location);
+        setResult(RESULT_OK, returnIntent);
+        finish();
     }
 }

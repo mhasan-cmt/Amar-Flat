@@ -1,5 +1,6 @@
 package com.teamphoenix.amarflat;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -10,11 +11,20 @@ import com.teamphoenix.amarflat.databinding.ActivitySearchFilterBinding;
 
 import org.florescu.android.rangeseekbar.RangeSeekBar;
 
-import java.util.Map;
-
 public class SearchFilterActivity extends AppCompatActivity {
 
+    private static final int LOCATION_RECEIVE_CODE =101 ;
     private ActivitySearchFilterBinding searchFilterBinding;
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == LOCATION_RECEIVE_CODE){
+            if(resultCode == RESULT_OK){
+                searchFilterBinding.txt2.setText(data.getStringExtra("CityName"));
+            }
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +36,7 @@ public class SearchFilterActivity extends AppCompatActivity {
         searchFilterBinding.searchBtnOpenMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(SearchFilterActivity.this, MapsActivity.class));
+                startActivityForResult(new Intent(SearchFilterActivity.this, MapsActivity.class), LOCATION_RECEIVE_CODE);
             }
         });
         searchFilterBinding.searchCity.setOnClickListener(new View.OnClickListener() {

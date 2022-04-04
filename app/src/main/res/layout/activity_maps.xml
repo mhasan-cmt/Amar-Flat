@@ -22,10 +22,30 @@
             map:title="Search"
             map:titleTextColor="@color/white">
 
-            <SearchView
-                android:id="@+id/search_location"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:weightSum="7"
+                android:gravity="center_vertical"
+                >
+                <SearchView
+                    android:id="@+id/search_location"
+                    android:layout_width="0dp"
+                    android:layout_weight="5"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    />
+                <Button
+                    android:id="@+id/map_done_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:text="Done"
+                    android:textColor="@color/black"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
