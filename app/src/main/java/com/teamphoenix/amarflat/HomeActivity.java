@@ -88,7 +88,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Set Contact Action Here", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_search:
-                Toast.makeText(this, "set search action Here", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, SearchFilterActivity.class));
                 break;
             case R.id.nav_language:
                 Toast.makeText(this, "set language action here", Toast.LENGTH_SHORT).show();

@@ -17,6 +17,7 @@
             android:layout_height="match_parent"
             app:title="Filters"
             app:navigationIcon="@drawable/back_arrow"
+            app:navigationIconTint="@color/white"
             app:menu="@menu/filter_menu"
             />
     </com.google.android.material.appbar.AppBarLayout>
