@@ -5,4 +5,5 @@
     <string name="Open_Drawer">Open drawer</string>
     <string name="Close_Drawer">Close drawer</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="update_profile">Update Profile</string>
 </resources>
