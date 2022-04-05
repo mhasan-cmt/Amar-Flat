@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Amar Flat</string>
+    <string name="app_name">আমার ফ্ল্যাট</string>
     <string name="agreement">সাবমিট বাটনে ক্লিক করে আপনি আমাদের শর্তাবলীতে সম্মত হন</string>
+    <string name="log_out">লগ আউট</string>
+    <string name="rent_question_text">আপনার সম্পত্তি বিক্রি বা ভাড়া খুঁজছেন?</string>
+    <string name="update_profile">প্রোফাইল আপডেট</string>
+    <string name="all_cities">সব শহর</string>
+    <string name="hint_your_name">আপনার নাম</string>
+    <string name="hint_email_address">আপনার ইমেইল</string>
+    <string name="hint_password">আপনার পাসওয়ার্ড</string>
+    <string name="unit_phone_number">ফোন নাম্বার</string>
+    <string name="btn_text_submit">সাবমিট</string>
+    <string name="btn_text_login">লগ ইন</string>
+    <string name="or">অথবা</string>
 </resources>

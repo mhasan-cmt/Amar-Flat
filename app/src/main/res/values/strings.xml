@@ -8,4 +8,12 @@
     <string name="update_profile">Update Profile</string>
     <string name="rent_question_text">Looking to sell or rent out your property?</string>
     <string name="log_out">Log Out</string>
+    <string name="all_cities">All Cities</string>
+    <string name="hint_your_name">Your Name</string>
+    <string name="hint_email_address">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="unit_phone_number">Phone Number</string>
+    <string name="btn_text_submit">Submit</string>
+    <string name="btn_text_login">LogIn</string>
+    <string name="or">OR</string>
 </resources>
