@@ -129,7 +129,20 @@
                             android:textStyle="bold"
                             app:drawableStartCompat="@drawable/ic_baseline_map_24"
                             app:drawableTint="@color/black" />
-
+                        <TextView
+                            android:layout_below="@id/txt_2"
+                            android:id="@+id/areaTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:paddingStart="8dp"
+                            android:text="Area"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_baseline_map_24"
+                            app:drawableTint="@color/black" />
                         <Button
                             android:id="@+id/search_btn_open_map"
                             android:layout_width="wrap_content"
