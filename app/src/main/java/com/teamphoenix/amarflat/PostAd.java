@@ -57,6 +57,10 @@ public class PostAd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         postAdBinding = ActivityPostAdBinding.inflate(getLayoutInflater());
+
+//        For Activity Transition
+        overridePendingTransition(R.anim.slide_in_from_right,R.anim.slide_out_to_left);
+
         setContentView(postAdBinding.getRoot());
         preferences = getSharedPreferences("user_data",MODE_PRIVATE);
         editor = preferences.edit();
