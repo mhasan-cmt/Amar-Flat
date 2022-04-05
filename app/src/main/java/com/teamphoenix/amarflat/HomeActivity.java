@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.teamphoenix.amarflat.Fragment.FavoritesFragment;
@@ -25,9 +26,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         homeBinding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(homeBinding.getRoot());
+        AppBarLayout.LayoutParams params = new AppBarLayout.LayoutParams(
+                AppBarLayout.LayoutParams.WRAP_CONTENT,
+                AppBarLayout.LayoutParams.WRAP_CONTENT
+        );
+
 
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this,
                 homeBinding.homeDrawer,
@@ -42,6 +47,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         homeBinding.navView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 Fragment fragment = null;
                 switch (item.getItemId()){
                     case R.id.home:
