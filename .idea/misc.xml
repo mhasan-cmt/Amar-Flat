@@ -20,15 +20,24 @@
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/single_post.xml" value="0.25" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/background_button.xml" value="0.1775" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/home_icon.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/image_overlay.xml" value="0.2115" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/drawable/radio_background.xml" value="0.1185" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout-v23/activity_post_ad.xml" value="0.1" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_city.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_maps.xml" value="0.2" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_post_ad.xml" value="0.22" />
-        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_search_filter.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_sign_up.xml" value="0.22" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_profile_setting.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_search_filter.xml" value="0.33" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_search_result.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/fragment_projects.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/item_city.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/nav_header.xml" value="0.22" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/layout/single_post.xml" value="0.5" />
         <entry key="..\:/Users/Mahmudul Hasan/AndroidStudioProjects/AmarFlat/app/src/main/res/menu/nav_menu.xml" value="0.20416666666666666" />

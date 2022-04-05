@@ -13,7 +13,7 @@
         android:layout_height="?attr/actionBarSize">
         <SearchView
             android:id="@+id/city_searchView"
-            android:background="@color/black"
+            android:background="@color/primary"
             android:layout_width="match_parent"
             android:textColor="@color/white"
             android:paddingHorizontal="15dp"

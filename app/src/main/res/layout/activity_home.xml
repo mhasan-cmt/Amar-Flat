@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    >
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,7 +31,8 @@
                     android:contentDescription="@string/app_name"
                     android:fitsSystemWindows="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/toolbar_bg"
+                    android:src="@drawable/header_bg"
+                    android:foreground="@drawable/image_overlay"
                     android:id="@+id/imageTitle"/>
 
                 <com.google.android.material.appbar.MaterialToolbar
@@ -40,7 +42,7 @@
                     android:background="@android:color/transparent"
                     android:elevation="0dp"
                     app:title="@string/app_name"
-                    app:titleTextColor="@color/black" />
+                    app:titleTextColor="@color/white" />
             </com.google.android.material.appbar.CollapsingToolbarLayout>
 
 
@@ -51,14 +53,16 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@id/navView"
-            android:layout_below="@id/appbar_layout" />
+            android:layout_below="@id/appbar_layout"
+            android:background="@color/white" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navView"
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_alignParentBottom="true"
-            android:background="@android:color/background_dark"
+            android:background="@color/black"
+            app:itemIconTint="@color/white"
             app:menu="@menu/bottom_nav" />
     </RelativeLayout>
 
@@ -69,6 +73,8 @@
         android:layout_gravity="start"
         app:headerLayout="@layout/nav_header"
         app:itemIconTint="@color/primary"
-        app:menu="@menu/nav_menu" />
+        app:menu="@menu/nav_menu"
+        android:background="@color/black"
+        />
 
 </androidx.drawerlayout.widget.DrawerLayout>

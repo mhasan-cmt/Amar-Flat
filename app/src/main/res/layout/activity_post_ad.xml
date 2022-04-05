@@ -10,7 +10,6 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginBottom="12dp"
         android:background="@color/primary">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -23,17 +22,20 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/appbar"
-        android:layout_marginBottom="50dp">
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="20dp">
+            android:paddingHorizontal="20dp"
+            android:background="@color/black"
+            android:paddingTop="15dp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -188,12 +190,11 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="55dp"
                     android:background="@drawable/bottom_border"
                     android:orientation="horizontal"
                     android:paddingBottom="15dp">
-
                 </LinearLayout>
             </LinearLayout>
 
@@ -384,7 +385,8 @@
                         android:id="@+id/bedroomRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        >
 
                         <RadioButton
                             android:id="@+id/bedroom1"
@@ -896,68 +898,50 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
                         android:text="Contact Number"
+                        android:textColor="@color/white"
                         android:textSize="15dp" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="55dp"
-                    android:orientation="vertical"
-                    android:paddingBottom="15dp"
-                    android:weightSum="4">
-
-                    <LinearLayout
+                    android:background="@drawable/bottom_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp">
+                    <EditText
+                        android:id="@+id/phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:text="+880" />
-
-                        <EditText
-                            android:id="@+id/phone"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom_border"
-                            android:drawableTint="@color/white_gray"
-                            android:hint="xxxxxxxxxx"
-                            android:inputType="number"
-                            android:paddingBottom="5dp"
-                            android:singleLine="true" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/numberAlert"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="*Number is required"
-                        android:textColor="@color/red"
-                        android:visibility="gone" />
-
-
+                        android:layout_weight="4"
+                        android:background="@drawable/bottom_border"
+                        android:drawableTint="@color/white_gray"
+                        android:hint="Phone Number"
+                        android:textSize="15sp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true" />
                 </LinearLayout>
+
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
         android:background="@drawable/top_border"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingVertical="5dp">
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="8dp"
+        >
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/primary"
             android:onClick="postAd"
             android:text="Post Ad"

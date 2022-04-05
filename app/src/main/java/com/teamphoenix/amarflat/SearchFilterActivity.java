@@ -46,6 +46,12 @@ public class SearchFilterActivity extends AppCompatActivity {
                 startActivity(new Intent(SearchFilterActivity.this, CityActivity.class));
             }
         });
+        searchFilterBinding.searchMaterialToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
 
     }
 
