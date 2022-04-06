@@ -19,6 +19,9 @@ import com.teamphoenix.amarflat.Fragment.HomeFragment;
 import com.teamphoenix.amarflat.Fragment.ProfileFragment;
 import com.teamphoenix.amarflat.Fragment.ProjectsFragment;
 import com.teamphoenix.amarflat.databinding.ActivityHomeBinding;
+import com.teamphoenix.amarflat.util.LanguageUtil;
+
+import java.util.Locale;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ActivityHomeBinding homeBinding;
@@ -97,7 +100,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, SearchFilterActivity.class));
                 break;
             case R.id.nav_language:
-                Toast.makeText(this, "set language action here", Toast.LENGTH_SHORT).show();
+                if(homeBinding.mainToolbar.getTitle().equals("Amar Flat")){
+                    LanguageUtil.setLanguage(this,"bn");
+                    startActivity(new Intent(this, SplashScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                }else{
+                    LanguageUtil.setLanguage(this,"en");
+                    startActivity(new Intent(this, SplashScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                }
                 break;
             case R.id.nav_home:
                 HomeFragment homeFragment = new HomeFragment();
