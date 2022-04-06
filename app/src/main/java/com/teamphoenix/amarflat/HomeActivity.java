@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.appbar.AppBarLayout;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.android.material.navigation.NavigationView;
 import com.teamphoenix.amarflat.Fragment.FavoritesFragment;
@@ -19,6 +20,9 @@ import com.teamphoenix.amarflat.Fragment.ProfileFragment;
 import com.teamphoenix.amarflat.Fragment.ProjectsFragment;
 import com.teamphoenix.amarflat.PostAd.PostAd;
 import com.teamphoenix.amarflat.databinding.ActivityHomeBinding;
+import com.teamphoenix.amarflat.util.LanguageUtil;
+
+import java.util.Locale;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ActivityHomeBinding homeBinding;
@@ -26,9 +30,13 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         homeBinding = ActivityHomeBinding.inflate(getLayoutInflater());
         setContentView(homeBinding.getRoot());
+        AppBarLayout.LayoutParams params = new AppBarLayout.LayoutParams(
+                AppBarLayout.LayoutParams.WRAP_CONTENT,
+                AppBarLayout.LayoutParams.WRAP_CONTENT
+        );
+
 
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this,
                 homeBinding.homeDrawer,
@@ -43,6 +51,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         homeBinding.navView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 Fragment fragment = null;
                 switch (item.getItemId()){
                     case R.id.home:
@@ -89,10 +98,16 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 Toast.makeText(this, "Set Contact Action Here", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_search:
-                Toast.makeText(this, "set search action Here", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, SearchFilterActivity.class));
                 break;
             case R.id.nav_language:
-                Toast.makeText(this, "set language action here", Toast.LENGTH_SHORT).show();
+                if(homeBinding.mainToolbar.getTitle().equals("Amar Flat")){
+                    LanguageUtil.setLanguage(this,"bn");
+                    startActivity(new Intent(this, SplashScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                }else{
+                    LanguageUtil.setLanguage(this,"en");
+                    startActivity(new Intent(this, SplashScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                }
                 break;
             case R.id.nav_home:
                 HomeFragment homeFragment = new HomeFragment();

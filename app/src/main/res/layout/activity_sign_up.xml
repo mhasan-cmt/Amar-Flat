@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
+    tools:context=".SignUpActivity"
+    android:background="@color/black"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,8 +14,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="18dp"
+            android:layout_marginHorizontal="15dp"
             android:id="@+id/topPanel"
             android:orientation="vertical">
 
@@ -22,12 +23,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Your Name">
+                android:textColorHint="@color/white"
+                android:hint="@string/hint_your_name">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:singleLine="true"
+                    android:textColor="@color/white"
                     android:id="@+id/name"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -36,7 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Email Address">
+                android:textColorHint="@color/white"
+                android:hint="@string/hint_email_address">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -50,7 +54,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Password"
+                android:hint="@string/hint_password"
+                android:textColorHint="@color/white"
                 app:endIconMode="password_toggle">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -58,6 +63,7 @@
                     android:layout_height="match_parent"
                     android:inputType="textPassword"
                     android:singleLine="true"
+                    android:textColor="@color/white"
                     android:id="@+id/password"/>
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,21 +74,23 @@
                 android:weightSum="6"
                 android:layout_marginTop="15dp"
                 >
-                <Spinner
+                <com.hbb20.CountryCodePicker
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:background="@android:color/holo_blue_dark"
-                    android:textColorHint="@color/white"
-                    android:textSize="18sp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="2"/>
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    app:ccpDialog_textColor="@color/white"
+                    app:ccp_arrowColor="@color/white"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:id="@+id/ccp"/>
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/signUpg_text_phone"
                     android:layout_width="0dp"
                     android:layout_weight="4"
                     android:layout_height="60dp"
-                    android:hint="Phone Number"
+                    android:hint="@string/unit_phone_number"
                     android:layout_gravity="center_vertical"
+                    android:textColorHint="@color/white"
                     >
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -100,11 +108,13 @@
                 android:textSize="18sp"
                 android:padding="8dp"
                 android:layout_marginTop="8dp"
+                android:textColor="@color/white"
                 />
             <Button
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Submit"
+                android:text="@string/btn_text_submit"
                 android:paddingVertical="5dp"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -116,21 +126,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="15dp"
+            android:layout_margin="8dp"
             >
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="OR"
+                android:text="@string/or"
                 android:textStyle="bold"
-                android:textSize="28sp"
-                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/white"
                 android:textAlignment="center"/>
             <Button
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="LogIn"
+                android:text="@string/btn_text_login"
                 android:textSize="18sp"
                 android:onClick="login"/>
         </LinearLayout>

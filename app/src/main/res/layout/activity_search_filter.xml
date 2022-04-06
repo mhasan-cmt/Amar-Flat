@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchFilterActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/search_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:background="@color/secondary"
+        >
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/search_material_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:menu="@menu/filter_menu"
+            app:navigationIcon="@drawable/back_arrow"
+            app:navigationIconTint="@color/white"
+            app:title="@string/filter" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/search_btn_container"
+        android:layout_below="@id/search_app_bar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/black"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:paddingStart="8dp"
+                        android:text="@string/i_want_to"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/ic_baseline_check_circle_outline_24"
+                        app:drawableTint="@color/white" />
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/search_switch_user_want"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="10dp"
+                        android:textOff="@string/buy"
+                        android:textOn="@string/rent"
+                        android:thumb="@drawable/switch_thumb"
+                        app:showText="true"
+                        app:track="@drawable/switch_track"
+                        app:useMaterialThemeColors="false" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/search_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="20dp"
+                        android:paddingStart="8dp"
+                        android:text="@string/city"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        app:drawableEndCompat="@drawable/ic_baseline_arrow_forward"
+                        app:drawableStartCompat="@drawable/location"
+                        app:drawableTint="@color/black" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="15dp"
+                        android:background="@color/black" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingVertical="10dp">
+
+                        <TextView
+                            android:id="@+id/txt_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:paddingVertical="20dp"
+                            android:paddingStart="8dp"
+                            android:text="@string/select_location"
+                            android:textSize="18sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_baseline_map_24"
+                            app:drawableTint="@color/black" />
+
+                        <TextView
+                            android:id="@+id/areaTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txt_2"
+                            android:layout_gravity="start"
+                            android:drawablePadding="15dp"
+                            android:gravity="center_vertical"
+                            android:paddingStart="8dp"
+                            android:text="@string/area_size"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_baseline_map_24"
+                            app:drawableTint="@color/black" />
+
+                        <Button
+                            android:id="@+id/search_btn_open_map"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:drawableLeft="@drawable/ic_baseline_map_24"
+                            android:paddingVertical="8dp"
+                            android:text="@string/open_map"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/black"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp"
+                        android:paddingStart="8dp"
+                        android:textColor="@color/white"
+                        android:text="@string/price_range"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:drawableStartCompat="@drawable/favorite_icon"
+                        app:drawableTint="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="7">
+
+                        <EditText
+                            android:id="@+id/search_seekbar_min_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@color/white_gray"
+                            android:hint="@string/_0"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/to"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/white"/>
+
+                        <EditText
+                            android:id="@+id/search_seekbar_max_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@color/white_gray"
+                            android:hint="@string/any"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <org.florescu.android.rangeseekbar.RangeSeekBar
+                        android:id="@+id/search_price_rangeSeekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        app:absoluteMaxValue="10000000"
+                        app:activeColor="@color/primary"
+                        app:barHeight="5dp"
+                        app:defaultColor="@color/white_gray"
+                        app:showLabels="false"
+                        app:valuesAboveThumbs="false" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/black"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:drawablePadding="15dp"
+                        android:gravity="center_vertical"
+                        android:paddingVertical="8dp"
+                        android:paddingStart="8dp"
+                        android:text="@string/area_range"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        app:drawableStartCompat="@drawable/favorite_icon"
+                        app:drawableTint="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="7">
+
+                        <EditText
+                            android:id="@+id/search_seekbar_area_min_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@color/white_gray"
+                            android:hint="0"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="To"
+                            android:textSize="22sp"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/search_seekbar_area_max_value"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:background="@color/white_gray"
+                            android:hint="Any"
+                            android:inputType="numberDecimal"
+                            android:padding="8dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <org.florescu.android.rangeseekbar.RangeSeekBar
+                        android:id="@+id/search_area_rangeSeekbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="25dp"
+                        app:absoluteMaxValue="10000000"
+                        app:activeColor="@color/primary"
+                        app:barHeight="5dp"
+                        app:defaultColor="@color/white_gray"
+                        app:showLabels="false"
+                        app:valuesAboveThumbs="false" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/black"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            app:cardBackgroundColor="@color/primary"
+                            app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/bedroom" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="@string/bedrooms"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp">
+
+                        <RadioGroup
+                            android:id="@+id/bedroomRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/bedroom1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_1"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bedroom2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_2"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bedroom3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_3"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bedroom4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_4"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bedroom5More"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_5"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/black"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="5dp"
+                            app:cardBackgroundColor="@color/primary"
+                            app:cardCornerRadius="20dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp"
+                                android:src="@drawable/bathroom" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:text="@string/bathrooms"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="55dp"
+                        android:background="@drawable/bottom_border"
+                        android:orientation="horizontal"
+                        android:paddingBottom="15dp">
+
+                        <RadioGroup
+                            android:id="@+id/bathroomRadio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/bathroom1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_1"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bathroom2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_2"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bathroom3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_3"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bathroom4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_4"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+
+                            <RadioButton
+                                android:id="@+id/bathroom5More"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:background="@drawable/radio_background"
+                                android:button="@android:color/transparent"
+                                android:padding="10dp"
+                                android:text="@string/_5"
+                                android:textAlignment="center"
+                                android:textColor="@drawable/radio_color" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/white_gray" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/search_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:gravity="end|center_vertical"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/search_btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:text="@string/reset"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/search_btn_show_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="@string/show_all_ads"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

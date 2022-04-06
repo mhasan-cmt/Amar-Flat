@@ -34,6 +34,7 @@ import com.teamphoenix.amarflat.PostAd.Fragment.CommercialFragment;
 import com.teamphoenix.amarflat.PostAd.Fragment.HomesFragment;
 import com.teamphoenix.amarflat.PostAd.Fragment.PlotsFragment;
 import com.teamphoenix.amarflat.R;
+import com.teamphoenix.amarflat.databinding.ActivityPostAdBinding;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -50,7 +51,7 @@ public class PostAd extends AppCompatActivity {
     ArrayList<Uri> postAdImageList;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-    private com.teamphoenix.amarflat.databinding.ActivityPostAdBinding postAdBinding;
+    private ActivityPostAdBinding postAdBinding;
     String propertyType="";
 
     @Override
@@ -62,6 +63,11 @@ public class PostAd extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         postAdBinding = com.teamphoenix.amarflat.databinding.ActivityPostAdBinding.inflate(getLayoutInflater());
+        postAdBinding = ActivityPostAdBinding.inflate(getLayoutInflater());
+
+//        For Activity Transition
+        overridePendingTransition(R.anim.slide_in_from_right,R.anim.slide_out_to_left);
+
         setContentView(postAdBinding.getRoot());
         preferences = getSharedPreferences("user_data",MODE_PRIVATE);
         editor = preferences.edit();

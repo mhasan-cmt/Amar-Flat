@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragment.FavoritesFragment">
+    tools:context=".Fragment.FavoritesFragment"
+    android:background="@color/white"
+    >
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,23 +13,17 @@
 
         <RelativeLayout
             android:id="@+id/headBar"
+            android:background="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/menuButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:src="@drawable/menu" />
-
             <TextView
-                android:layout_width="wrap_content"
+                android:paddingVertical="8dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/menuButton"
-                android:text="Favorites"
-                android:textColor="@color/black"
+                android:text="@string/favourites"
+                android:textColor="@color/white"
+                android:gravity="center"
                 android:textSize="20dp" />
         </RelativeLayout>
         <androidx.recyclerview.widget.RecyclerView

@@ -10,7 +10,6 @@
         android:id="@+id/appbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_marginBottom="12dp"
         android:background="@color/primary">
 
         <com.google.android.material.appbar.MaterialToolbar
@@ -18,22 +17,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:navigationIcon="@drawable/back_arrow"
-            app:title="Post a Property"
+            app:title="@string/post_a_property"
             app:titleTextColor="@color/black" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/appbar"
-        android:layout_marginBottom="50dp">
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="20dp">
+            android:paddingHorizontal="20dp"
+            android:background="@color/black"
+            android:paddingTop="15dp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,7 +65,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Purpose"
+                        android:text="@string/purpose"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -90,7 +92,7 @@
                             android:checked="true"
                             android:paddingVertical="5dp"
                             android:paddingHorizontal="20dp"
-                            android:text="Sell"
+                            android:text="@string/sell"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
 
@@ -102,7 +104,7 @@
                             android:paddingVertical="5dp"
                             android:background="@drawable/radio_background"
                             android:button="@android:color/transparent"
-                            android:text="Rent"
+                            android:text="@string/rent"
                             android:textAlignment="center"
                             android:textColor="@drawable/radio_color" />
                     </RadioGroup>
@@ -138,8 +140,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Select Property Type"
-                        android:textSize="15dp" />
+                        android:text="@string/select_property_type"
+                        android:textSize="15sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -202,18 +204,17 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Select Location"
-                        android:textSize="15dp" />
+                        android:text="@string/select_location"
+                        android:textSize="15sp" />
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="55dp"
                     android:background="@drawable/bottom_border"
                     android:orientation="horizontal"
                     android:paddingBottom="15dp">
-
                 </LinearLayout>
             </LinearLayout>
 
@@ -246,8 +247,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Area Size"
-                        android:textSize="15dp" />
+                        android:text="@string/area_size"
+                        android:textSize="15sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -270,7 +271,7 @@
                             android:layout_weight="4"
                             android:background="@drawable/bottom_border"
                             android:drawableTint="@color/white_gray"
-                            android:hint="Enter area size"
+                            android:hint="@string/enter_area_size"
                             android:inputType="number"
                             android:paddingBottom="5dp"
                             android:singleLine="true" />
@@ -288,7 +289,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="*Area is required"
+                        android:text="@string/area_is_required"
                         android:textColor="@color/red"
                         android:visibility="gone" />
                 </LinearLayout>
@@ -325,7 +326,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Total Price"
+                        android:text="@string/total_price"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -353,7 +354,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="*Price is required"
+                        android:text="@string/price_is_required"
                         android:textColor="@color/red"
                         android:visibility="gone" />
 
@@ -388,7 +389,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Bedrooms"
+                        android:text="@string/bedrooms"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -404,7 +405,8 @@
                         android:id="@+id/bedroomRadio"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        >
 
                         <RadioButton
                             android:id="@+id/bedroom1"
@@ -496,7 +498,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Bathrooms"
+                        android:text="@string/bathrooms"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -605,7 +607,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Property Title"
+                        android:text="@string/property_title"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -623,7 +625,7 @@
                         android:layout_height="wrap_content"
                         android:background="@drawable/bottom_border"
                         android:drawableTint="@color/white_gray"
-                        android:hint="Enter Title"
+                        android:hint="@string/hint_enter_title"
                         android:paddingBottom="5dp"
                         android:singleLine="true" />
 
@@ -632,7 +634,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="*Title minimum 5 character required"
+                        android:text="@string/error_title_minimum_5_character_required"
                         android:textColor="@color/red"
                         android:visibility="gone" />
 
@@ -668,7 +670,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Property Description"
+                        android:text="@string/property_description"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -687,7 +689,7 @@
                         android:layout_weight="4"
                         android:background="@drawable/bottom_border"
                         android:drawableTint="@color/white_gray"
-                        android:hint="Describe your property in detail"
+                        android:hint="@string/describe_your_property_in_detail"
                         android:paddingBottom="5dp" />
 
                     <TextView
@@ -695,7 +697,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="*Minimum 5 character is required"
+                        android:text="@string/error_minimum_5_character_is_required"
                         android:textColor="@color/red"
                         android:visibility="gone" />
 
@@ -732,7 +734,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Property Features"
+                        android:text="@string/property_features"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -751,7 +753,7 @@
                         android:layout_weight="4"
                         android:background="@drawable/bottom_border"
                         android:drawableTint="@color/white_gray"
-                        android:hint="Describe your property in detail"
+                        android:hint="@string/hint_describe_your_property_in_detail"
                         android:paddingBottom="5dp" />
 
                 </LinearLayout>
@@ -786,7 +788,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Upload images of your property"
+                        android:text="@string/hint_upload_images_of_your_property"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -807,7 +809,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:onClick="picAdd"
-                            android:text="Add Image"
+                            android:text="@string/add_image"
                             android:textColor="@color/black" />
                     </LinearLayout>
 
@@ -853,7 +855,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Email Address"
+                        android:text="@string/hint_email_address"
                         android:textSize="15dp" />
                 </LinearLayout>
 
@@ -872,7 +874,7 @@
                         android:layout_weight="4"
                         android:background="@drawable/bottom_border"
                         android:drawableTint="@color/white_gray"
-                        android:hint="Email"
+                        android:hint="@string/hint_email_address"
                         android:paddingBottom="5dp"
                         android:singleLine="true" />
 
@@ -881,7 +883,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="*email is required"
+                        android:text="@string/error_email_is_required"
                         android:textColor="@color/red"
                         android:visibility="gone" />
                 </LinearLayout>
@@ -916,72 +918,53 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="15dp"
-                        android:text="Contact Number"
+                        android:text="@string/unit_phone_number"
                         android:textSize="15dp" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:layout_marginLeft="55dp"
-                    android:orientation="vertical"
-                    android:paddingBottom="15dp"
-                    android:weightSum="4">
-
-                    <LinearLayout
+                    android:background="@drawable/bottom_border"
+                    android:orientation="horizontal"
+                    android:paddingBottom="15dp">
+                    <EditText
+                        android:id="@+id/phone"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:text="+880" />
-
-                        <EditText
-                            android:id="@+id/phone"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom_border"
-                            android:drawableTint="@color/white_gray"
-                            android:hint="xxxxxxxxxx"
-                            android:inputType="number"
-                            android:paddingBottom="5dp"
-                            android:singleLine="true" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/numberAlert"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:text="*Number is required"
-                        android:textColor="@color/red"
-                        android:visibility="gone" />
-
-
+                        android:layout_weight="4"
+                        android:background="@drawable/bottom_border"
+                        android:drawableTint="@color/white_gray"
+                        android:hint="Phone Number"
+                        android:textSize="15sp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true" />
                 </LinearLayout>
+
             </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="1dp"
         android:background="@drawable/top_border"
         android:gravity="center"
         android:orientation="horizontal"
-        android:paddingVertical="5dp">
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginBottom="8dp"
+        >
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/primary"
             android:onClick="postAd"
-            android:text="Post Ad"
+            android:text="@string/post_ad"
             android:textColor="@color/black" />
     </LinearLayout>
 

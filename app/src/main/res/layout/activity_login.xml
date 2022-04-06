@@ -18,7 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Log in"
+            android:text="@string/btn_text_login"
             android:textAlignment="center"
             android:textSize="32sp"
             android:padding="8dp"
@@ -28,7 +28,7 @@
             android:id="@+id/signUpg_text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email Address"
+            android:hint="@string/hint_email_address"
             android:layout_marginBottom="10dp"
             >
 
@@ -42,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
-            android:hint="Password"
+            android:hint="@string/hint_password"
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -55,7 +55,7 @@
             android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Log In"
+            android:text="@string/btn_text_login"
             android:textSize="18sp"
             android:onClick="login"
             />
@@ -79,7 +79,7 @@
             android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:text="Sign Up Now"
+            android:text="@string/common_signin_button_text"
             android:textSize="18sp"
             android:onClick="signUp"/>
     </LinearLayout>

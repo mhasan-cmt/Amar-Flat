@@ -29,7 +29,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingVertical="20dp">
+            android:paddingVertical="20dp"
+            android:background="@color/black"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,13 +47,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="10dp"
-                        android:text="Ask Us Anything"
-                        android:textSize="20dp"
+                        android:text="@string/ask_us_anything"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/white"
                         android:text="We at amarflat.com are open to any and all inquiries and suggestions you may have. The occasional hilarious joke wouldn't be entrirely amiss either."
                         />
                 </LinearLayout>
@@ -61,7 +65,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="7dp"
-                    android:hint="Name"
+                    android:hint="@string/hint_your_name"
+                    android:textColorHint="@color/white"
                     android:singleLine="true" />
 
                 <EditText
@@ -69,7 +74,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="7dp"
-                    android:hint="Email"
+                    android:hint="@string/hint_email_address"
+                    android:textColorHint="@color/white"
                     android:singleLine="true" />
 
                 <LinearLayout
@@ -95,7 +101,8 @@
                         android:layout_height="60dp"
                         android:layout_gravity="center_vertical"
                         android:layout_weight="4"
-                        android:hint="Phone Number">
+                        android:textColorHint="@color/white"
+                        android:hint="@string/unit_phone_number">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/phone"
@@ -115,7 +122,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bottom_border"
-                        android:hint="Your Message"
+                        android:hint="@string/your_message"
+                        android:textColorHint="@color/white"
                         android:id="@+id/message"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -124,7 +132,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:onClick="messageSend"
-                    android:text="Send"
+                    android:text="@string/send"
                     android:textColor="@color/black" />
             </LinearLayout>
             <com.google.android.material.divider.MaterialDivider
@@ -145,14 +153,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="10dp"
-                        android:text="GIVE US A CALL"
-                        android:textSize="20dp"
+                        android:text="@string/give_us_a_call"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Feel free to give us jingle on the following number."/>
+                        android:text="@string/feel_free_to_give_us_jingle_on_the_following_number"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -218,14 +226,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingVertical="10dp"
-                        android:text="Meet With US"
-                        android:textSize="20dp"
+                        android:text="@string/meet_with_us"
+                        android:textSize="20sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="We encourage you to come down and visit us because as much as we love phones and computers, we don't think they can ever be as awesome as we are in person."/>
+                        android:text="@string/we_encourage_you_to_come_down_and_visit_us_because_as_much_as_we_love_phones_and_computers_we_don_t_think_they_can_ever_be_as_awesome_as_we_are_in_person"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -234,20 +242,20 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Feni Office"
+                        android:text="@string/feni_office"
                         android:textAllCaps="true"
                         android:layout_marginTop="20dp"
                         android:textStyle="bold"
-                        android:textSize="17dp"
+                        android:textSize="17sp"
                         android:textColor="@color/primary"
                         android:textAlignment="center"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Feni, Chitagong \n Bangladesh"
+                        android:text="@string/address_chittagong"
                         android:paddingVertical="6dp"
                         android:textAlignment="center"
-                        android:textSize="17dp"/>
+                        android:textSize="17sp"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
