@@ -24,7 +24,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textColorHint="@color/white"
-                android:hint="Your Name">
+                android:hint="@string/hint_your_name">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:textColorHint="@color/white"
-                android:hint="Email Address">
+                android:hint="@string/hint_email_address">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -54,7 +54,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:hint="Password"
+                android:hint="@string/hint_password"
                 android:textColorHint="@color/white"
                 app:endIconMode="password_toggle">
 
@@ -88,7 +88,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="4"
                     android:layout_height="60dp"
-                    android:hint="Phone Number"
+                    android:hint="@string/unit_phone_number"
                     android:layout_gravity="center_vertical"
                     android:textColorHint="@color/white"
                     >
@@ -111,9 +111,10 @@
                 android:textColor="@color/white"
                 />
             <Button
+                android:textStyle="bold"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Submit"
+                android:text="@string/btn_text_submit"
                 android:paddingVertical="5dp"
                 android:textColor="@color/black"
                 android:textSize="18sp"
@@ -130,17 +131,18 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="OR"
+                android:text="@string/or"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textAlignment="center"/>
             <Button
+                android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="LogIn"
+                android:text="@string/btn_text_login"
                 android:textSize="18sp"
                 android:onClick="login"/>
         </LinearLayout>

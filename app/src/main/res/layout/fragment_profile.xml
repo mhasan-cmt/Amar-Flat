@@ -13,24 +13,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/headBar">
-
-            <ImageView
-                android:id="@+id/menuButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:src="@drawable/menu"
-                app:tint="@color/white" />
-
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/menuButton"
-                android:text="Profile"
+                android:gravity="center"
+                android:text="@string/profile"
+                android:paddingVertical="8dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
         </RelativeLayout>
 
         <ScrollView
@@ -66,15 +58,15 @@
                                 android:layout_height="wrap_content"
                                 android:text="Mohobbat Chutiya"
                                 android:textColor="@color/white"
-                                android:textSize="25dp" />
+                                android:textSize="18sp" />
 
                             <TextView
                                 android:id="@+id/userType"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Individual"
+                                android:text="@string/individual"
                                 android:textColor="@color/white"
-                                android:textSize="20dp" />
+                                android:textSize="20sp" />
                         </LinearLayout>
 
                         <androidx.cardview.widget.CardView
@@ -123,7 +115,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="10dp"
-                                    android:text="Profile Setting"
+                                    android:text="@string/profile_setting"
                                     android:textColor="@color/black" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
@@ -157,7 +149,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="10dp"
-                                    android:text="Saved Searches"
+                                    android:text="@string/saved_searches"
                                     android:textAlignment="center"
                                     android:textColor="@color/black" />
                             </LinearLayout>
@@ -191,7 +183,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="10dp"
-                                    android:text="Favourites"
+                                    android:text="@string/favourites"
                                     android:textAlignment="center"
                                     android:textColor="@color/black" />
                             </LinearLayout>
@@ -232,7 +224,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="10dp"
-                                    android:text="My Properties"
+                                    android:text="@string/my_properties"
                                     android:textColor="@color/black" />
                             </LinearLayout>
                         </androidx.cardview.widget.CardView>
@@ -266,7 +258,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="10dp"
-                                    android:text="Drafts"
+                                    android:text="@string/drafts"
                                     android:textAlignment="center"
                                     android:textColor="@color/black" />
                             </LinearLayout>
@@ -299,7 +291,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
                                     android:layout_marginTop="10dp"
-                                    android:text="My Searches"
+                                    android:text="@string/my_searches"
                                     android:textAlignment="center"
                                     android:textColor="@color/black" />
                             </LinearLayout>
@@ -337,7 +329,7 @@
                                 android:background="@color/primary_transparent"
                                 android:paddingHorizontal="10dp"
                                 android:paddingVertical="5dp"
-                                android:text="Post an Ad"
+                                android:text="@string/post_an_ad"
                                 android:textAlignment="center"
                                 android:textColor="@color/black" />
                         </LinearLayout>

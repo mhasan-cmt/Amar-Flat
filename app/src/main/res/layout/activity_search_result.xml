@@ -35,8 +35,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Homes for Rent"
-                android:textSize="20dp"
+                android:text="@string/homes_for_rent"
+                android:textSize="20sp"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -57,7 +57,7 @@
             android:layout_marginRight="10dp"
             android:background="@android:color/transparent"
             android:drawablePadding="10dp"
-            android:text="Save"
+            android:text="@string/save"
             android:textSize="20sp"
             android:textColor="@color/white"
             app:drawableLeftCompat="@drawable/save"
