@@ -17,6 +17,7 @@ import com.teamphoenix.amarflat.Fragment.FavoritesFragment;
 import com.teamphoenix.amarflat.Fragment.HomeFragment;
 import com.teamphoenix.amarflat.Fragment.ProfileFragment;
 import com.teamphoenix.amarflat.Fragment.ProjectsFragment;
+import com.teamphoenix.amarflat.PostAd.PostAd;
 import com.teamphoenix.amarflat.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{

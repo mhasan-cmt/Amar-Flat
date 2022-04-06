@@ -1,14 +1,4 @@
-package com.teamphoenix.amarflat;
-
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+package com.teamphoenix.amarflat.PostAd;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -21,6 +11,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -28,8 +27,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.tabs.TabLayout;
 import com.teamphoenix.amarflat.Adapter.PostAdPhotoViewRecycler;
-import com.teamphoenix.amarflat.databinding.ActivityPostAdBinding;
+import com.teamphoenix.amarflat.AddFeature;
+import com.teamphoenix.amarflat.PostAd.Fragment.CommercialFragment;
+import com.teamphoenix.amarflat.PostAd.Fragment.HomesFragment;
+import com.teamphoenix.amarflat.PostAd.Fragment.PlotsFragment;
+import com.teamphoenix.amarflat.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,7 +50,8 @@ public class PostAd extends AppCompatActivity {
     ArrayList<Uri> postAdImageList;
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
-    private ActivityPostAdBinding postAdBinding;
+    private com.teamphoenix.amarflat.databinding.ActivityPostAdBinding postAdBinding;
+    String propertyType="";
 
     @Override
     public void onBackPressed() {
@@ -56,7 +61,7 @@ public class PostAd extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        postAdBinding = ActivityPostAdBinding.inflate(getLayoutInflater());
+        postAdBinding = com.teamphoenix.amarflat.databinding.ActivityPostAdBinding.inflate(getLayoutInflater());
         setContentView(postAdBinding.getRoot());
         preferences = getSharedPreferences("user_data",MODE_PRIVATE);
         editor = preferences.edit();
@@ -66,6 +71,44 @@ public class PostAd extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 PostAd.super.onBackPressed();
+            }
+        });
+        postAdBinding.featureAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),AddFeature.class));
+            }
+        });
+
+        //property type
+        postAdBinding.propertyTypeTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getText().toString()){
+                    case "Homes":
+                        getSupportFragmentManager().beginTransaction().replace(R.id.propertyTypeFrame,new HomesFragment()).addToBackStack(null).commit();
+                        break;
+                    case "Plots":
+                        getSupportFragmentManager().beginTransaction().replace(R.id.propertyTypeFrame,new PlotsFragment()).addToBackStack(null).commit();
+                        break;
+                    case "Commercial":
+                        getSupportFragmentManager().beginTransaction().replace(R.id.propertyTypeFrame,new CommercialFragment()).addToBackStack(null).commit();
+                        break;
+                    default:
+
+                        getSupportFragmentManager().beginTransaction().replace(R.id.propertyTypeFrame,new HomesFragment()).addToBackStack(null).commit();
+
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
             }
         });
 
@@ -191,5 +234,9 @@ public class PostAd extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true);
         intent.setType("image/*");
         activityResultLauncher.launch(intent);
+    }
+    public void getProperyType(String value){
+        propertyType = value;
+        Toast.makeText(this, value, Toast.LENGTH_SHORT).show();
     }
 }
