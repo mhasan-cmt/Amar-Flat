@@ -66,7 +66,7 @@
                     android:layout_weight="4"
                     android:gravity="center"
                     android:paddingTop="5dp"
-                    android:text="Area"
+                    android:text="@string/area"
                     android:textColor="@color/white"
                     android:textSize="22sp" />
 
@@ -101,7 +101,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginHorizontal="8dp"
         android:backgroundTint="@color/primary"
-        android:text="Done"
+        android:text="@string/done"
         android:textColor="@color/black"
         android:textAllCaps="false"
         android:textStyle="bold"

@@ -21,7 +21,7 @@
             app:menu="@menu/filter_menu"
             app:navigationIcon="@drawable/back_arrow"
             app:navigationIconTint="@color/white"
-            app:title="Filters" />
+            app:title="@string/filter" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.core.widget.NestedScrollView
@@ -54,7 +54,7 @@
                         android:drawablePadding="15dp"
                         android:gravity="center_vertical"
                         android:paddingStart="8dp"
-                        android:text="I want to"
+                        android:text="@string/i_want_to"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:drawableStartCompat="@drawable/ic_baseline_check_circle_outline_24"
@@ -65,8 +65,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginVertical="10dp"
-                        android:textOff="Buy"
-                        android:textOn="Rent"
+                        android:textOff="@string/buy"
+                        android:textOn="@string/rent"
                         android:thumb="@drawable/switch_thumb"
                         app:showText="true"
                         app:track="@drawable/switch_track"
@@ -99,7 +99,7 @@
                         android:gravity="center_vertical"
                         android:paddingVertical="20dp"
                         android:paddingStart="8dp"
-                        android:text="City"
+                        android:text="@string/city"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@color/black"
@@ -127,7 +127,7 @@
                             android:gravity="center_vertical"
                             android:paddingVertical="20dp"
                             android:paddingStart="8dp"
-                            android:text="Select Location"
+                            android:text="@string/select_location"
                             android:textSize="18sp"
                             android:textColor="@color/black"
                             android:textStyle="bold"
@@ -143,7 +143,7 @@
                             android:drawablePadding="15dp"
                             android:gravity="center_vertical"
                             android:paddingStart="8dp"
-                            android:text="Area Size"
+                            android:text="@string/area_size"
                             android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold"
@@ -159,7 +159,7 @@
                             android:layout_marginEnd="10dp"
                             android:drawableLeft="@drawable/ic_baseline_map_24"
                             android:paddingVertical="8dp"
-                            android:text="Open Map"
+                            android:text="@string/open_map"
                             android:textAllCaps="false"
                             android:textColor="@color/black" />
                     </RelativeLayout>
@@ -194,7 +194,7 @@
                         android:paddingVertical="8dp"
                         android:paddingStart="8dp"
                         android:textColor="@color/white"
-                        android:text="Price Range"
+                        android:text="@string/price_range"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         app:drawableStartCompat="@drawable/favorite_icon"
@@ -213,7 +213,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:background="@color/white_gray"
-                            android:hint="0"
+                            android:hint="@string/_0"
                             android:inputType="numberDecimal"
                             android:padding="8dp"
                             android:textColor="@color/black"
@@ -225,7 +225,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="To"
+                            android:text="@string/to"
                             android:textSize="22sp"
                             android:textStyle="bold"
                             android:textColor="@color/white"/>
@@ -236,7 +236,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="3"
                             android:background="@color/white_gray"
-                            android:hint="Any"
+                            android:hint="@string/any"
                             android:inputType="numberDecimal"
                             android:padding="8dp"
                             android:textColor="@color/black"
@@ -283,7 +283,7 @@
                         android:gravity="center_vertical"
                         android:paddingVertical="8dp"
                         android:paddingStart="8dp"
-                        android:text="Area Range"
+                        android:text="@string/area_range"
                         android:textSize="18sp"
                         android:textStyle="bold"
                         android:textColor="@color/white"
@@ -388,9 +388,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
-                            android:text="Bedrooms"
+                            android:text="@string/bedrooms"
                             android:textColor="@color/white"
-                            android:textSize="15dp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -413,7 +413,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="1"
+                                android:text="@string/_1"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
 
@@ -425,7 +425,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="2"
+                                android:text="@string/_2"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
 
@@ -437,7 +437,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="3"
+                                android:text="@string/_3"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
 
@@ -449,7 +449,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="4"
+                                android:text="@string/_4"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
 
@@ -461,7 +461,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="5 +"
+                                android:text="@string/_5"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
                         </RadioGroup>
@@ -510,9 +510,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="15dp"
-                            android:text="Bathrooms"
+                            android:text="@string/bathrooms"
                             android:textColor="@color/white"
-                            android:textSize="15dp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -536,7 +536,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="1"
+                                android:text="@string/_1"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
 
@@ -548,7 +548,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="2"
+                                android:text="@string/_2"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
 
@@ -560,7 +560,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="3"
+                                android:text="@string/_3"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
 
@@ -572,7 +572,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="4"
+                                android:text="@string/_4"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
 
@@ -584,7 +584,7 @@
                                 android:background="@drawable/radio_background"
                                 android:button="@android:color/transparent"
                                 android:padding="10dp"
-                                android:text="5 +"
+                                android:text="@string/_5"
                                 android:textAlignment="center"
                                 android:textColor="@drawable/radio_color" />
                         </RadioGroup>
@@ -617,7 +617,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
-            android:text="Reset"
+            android:text="@string/reset"
             android:textAllCaps="false"
             android:textColor="@color/black"
             android:textSize="18sp" />
@@ -627,7 +627,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            android:text="Show 64 ads"
+            android:text="@string/show_all_ads"
             android:textColor="@color/black"
             android:textSize="18sp" />
     </LinearLayout>

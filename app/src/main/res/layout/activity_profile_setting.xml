@@ -44,7 +44,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Name"
+                        android:hint="@string/name"
                         android:textColorHint="@color/white"
                         android:textColor="@color/white"
                         android:id="@+id/name"/>
@@ -56,7 +56,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Email Address"
+                        android:hint="@string/hint_email_address"
                         android:textColorHint="@color/white"
                         android:textColor="@color/white"
                         android:id="@+id/email"/>
@@ -70,7 +70,7 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Password"
+                        android:hint="@string/hint_password"
                         android:inputType="textPassword"
                         android:id="@+id/password"/>
                 </com.google.android.material.textfield.TextInputLayout>

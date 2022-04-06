@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:text="BDT 5,30,000"
                 android:textColor="@color/white"
-                android:textSize="20dp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/propertyAddress"
@@ -71,13 +71,13 @@
                 android:layout_marginBottom="10dp"
                 android:text="120-L, Uttora, Dhaka"
                 android:textColor="@color/white"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/propertyPurposeType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="House For Rent"
+                android:text="@string/house_for_rent"
                 android:textColor="@color/white" />
 
             <LinearLayout
@@ -100,8 +100,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="5dp"
-                        android:text="5"
-                        android:textColor="@color/black" />
+                        android:text="@string/_5"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -120,8 +120,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="5dp"
-                        android:text="5"
-                        android:textColor="@color/black" />
+                        android:text="@string/_5"
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -141,7 +141,7 @@
                         android:layout_height="wrap_content"
                         android:paddingHorizontal="5dp"
                         android:text="5000 Sq Ft"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -160,7 +160,7 @@
                     android:background="@drawable/transparent_button"
                     android:gravity="center"
                     android:paddingVertical="5dp"
-                    android:text="SMS"
+                    android:text="@string/sms"
                     android:textAlignment="center"
                     android:textColor="@color/primary" />
 
@@ -173,7 +173,7 @@
                     android:background="@drawable/transparent_button"
                     android:gravity="center"
                     android:paddingVertical="5dp"
-                    android:text="Call"
+                    android:text="@string/call"
                     android:textAlignment="center"
                     android:textColor="@color/primary" />
 
