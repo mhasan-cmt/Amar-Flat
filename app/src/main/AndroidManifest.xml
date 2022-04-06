@@ -59,6 +59,9 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".ContactUsActivity"
+            android:exported="false" />
+        <activity
             android:name=".PostAd"
             android:exported="false" />
         <activity

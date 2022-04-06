@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.teamphoenix.amarflat.ContactUsActivity;
 import com.teamphoenix.amarflat.LoginActivity;
 import com.teamphoenix.amarflat.PostAd;
 import com.teamphoenix.amarflat.ProfileSetting;
@@ -43,6 +44,13 @@ public class ProfileFragment extends Fragment {
         editor = preferences.edit();
 
         profileBinding.userName.setText(preferences.getString("user_name","0"));
+
+        profileBinding.contactUsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), ContactUsActivity.class));
+            }
+        });
 
 
         profileBinding.postAdButton.setOnClickListener(new View.OnClickListener() {
