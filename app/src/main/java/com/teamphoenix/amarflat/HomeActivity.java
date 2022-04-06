@@ -1,8 +1,11 @@
 package com.teamphoenix.amarflat;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,17 +29,19 @@ import java.util.Locale;
 
 public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     ActivityHomeBinding homeBinding;
+    SharedPreferences sharedPreferences;
+    private ProfileFragment profileFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         homeBinding = ActivityHomeBinding.inflate(getLayoutInflater());
+        sharedPreferences = getSharedPreferences("user_data", MODE_PRIVATE);
         setContentView(homeBinding.getRoot());
         AppBarLayout.LayoutParams params = new AppBarLayout.LayoutParams(
                 AppBarLayout.LayoutParams.WRAP_CONTENT,
                 AppBarLayout.LayoutParams.WRAP_CONTENT
         );
-
 
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this,
                 homeBinding.homeDrawer,
@@ -47,7 +52,20 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         drawerToggle.syncState();
         homeBinding.mainNavView.setCheckedItem(R.id.nav_home);
         homeBinding.mainNavView.setNavigationItemSelectedListener(this);
+        View navViewHeader = homeBinding.mainNavView.getHeaderView(0);
+        TextView userNameNavHeader = navViewHeader.findViewById(R.id.nav_header_userName);
 
+        userNameNavHeader.setText(sharedPreferences.getString("user_name","0"));
+        userNameNavHeader.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(profileFragment==null){
+                    profileFragment = new ProfileFragment();
+                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container,profileFragment).addToBackStack(null).commit();
+
+            }
+        });
         homeBinding.navView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -75,6 +93,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
         });
+
     }
 
     @Override
@@ -95,7 +114,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, PostAd.class));
                 break;
             case R.id.nav_contact:
-                Toast.makeText(this, "Set Contact Action Here", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, ContactUsActivity.class));
                 break;
             case R.id.nav_search:
                 startActivity(new Intent(this, SearchFilterActivity.class));
