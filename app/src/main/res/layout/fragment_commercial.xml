@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostAd.Fragment.CommercialFragment">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/commercialRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Office"
+                android:id="@+id/office"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Shop"
+                android:id="@+id/shop"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Warehouse"
+                android:id="@+id/warehouse"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Factory"
+                android:id="@+id/factory"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Building"
+                android:id="@+id/building"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Other"
+                android:id="@+id/other"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+</LinearLayout>

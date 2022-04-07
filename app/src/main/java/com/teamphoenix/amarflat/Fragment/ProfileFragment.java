@@ -16,9 +16,8 @@ import android.view.ViewGroup;
 
 import com.teamphoenix.amarflat.ContactUsActivity;
 import com.teamphoenix.amarflat.LoginActivity;
-import com.teamphoenix.amarflat.PostAd;
+import com.teamphoenix.amarflat.PostAd.PostAd;
 import com.teamphoenix.amarflat.ProfileSetting;
-import com.teamphoenix.amarflat.R;
 import com.teamphoenix.amarflat.databinding.FragmentProfileBinding;
 
 

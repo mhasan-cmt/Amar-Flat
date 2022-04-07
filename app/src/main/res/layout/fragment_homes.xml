@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostAd.Fragment.HomesFragment">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/homesRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="House"
+                android:id="@+id/house"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Flat"
+                android:id="@+id/flat"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Upper Portion"
+                android:id="@+id/upperPortion"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Lower Portion"
+                android:id="@+id/lowerPortion"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Farm House"
+                android:id="@+id/farmHouse"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Room"
+                android:id="@+id/room"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Penthouse"
+                android:id="@+id/penthouse"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+</LinearLayout>

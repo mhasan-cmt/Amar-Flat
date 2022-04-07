@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PostAd.Fragment.PlotsFragment">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:id="@+id/plotsRadioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Residential Plot"
+                android:id="@+id/residentialPlot"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Commercial Plot"
+                android:id="@+id/commercialPlot"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Agricultural Land"
+                android:id="@+id/agriculturalLand"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Industrial Land"
+                android:id="@+id/industrialLand"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Plot File"
+                android:id="@+id/plotFile"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+            <RadioButton
+                android:layout_marginHorizontal="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radio_background"
+                android:button="@android:color/transparent"
+                android:paddingVertical="5dp"
+                android:paddingHorizontal="20dp"
+                android:text="Plot Form"
+                android:id="@+id/plotForm"
+                android:textAlignment="center"
+                android:textColor="@drawable/radio_color" />
+        </RadioGroup>
+    </HorizontalScrollView>
+
+</LinearLayout>
