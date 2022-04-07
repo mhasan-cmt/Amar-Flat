@@ -68,7 +68,7 @@ public class ExpandListViewAdapter extends BaseExpandableListAdapter {
 
     @Override
     public View getChildView(int i, int i1, boolean b, View view, ViewGroup viewGroup) {
-        View view1 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.list_item_demo,viewGroup,false);
+        View view1 = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.group_item,viewGroup,false);
         TextView textView= view1.findViewById(R.id.text1);
         textView.setText(getChild(i,i1).toString());
         return view1;
