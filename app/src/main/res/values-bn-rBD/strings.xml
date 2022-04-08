@@ -25,7 +25,7 @@
     <string name="add_property">প্রোপার্টি যোগ করুন</string>
     <string name="search">খুঁজুন</string>
     <string name="setting">সেটিংস</string>
-    <string name="contact_us">ঙ্গামাদের সাথে যোগাযোগ করুন</string>
+    <string name="contact_us">আমাদের সাথে যোগাযোগ করুন</string>
     <string name="language_en">ভাষা বাংলা</string>
     <string name="more">আরো</string>
     <string name="about">য়ামাদের সম্পর্কে</string>
@@ -59,7 +59,7 @@
     <string name="post_ad">পোস্ট যোগ করুণ</string>
     <string name="name">আপনার নাম</string>
     <string name="filter">সার্চ ফিল্টার</string>
-    <string name="i_want_to">আমি ছাই</string>
+    <string name="i_want_to">আমি চাই</string>
     <string name="buy">বিক্রি</string>
     <string name="city">শহর</string>
     <string name="open_map">ম্যাপ খুলুন</string>
@@ -84,10 +84,16 @@
     <string name="favourites">প্রিয় লিস্ট</string>
     <string name="my_properties">আমার সম্পত্তি সমূহ</string>
     <string name="drafts">ড্রাফট সমূহ</string>
-    <string name="my_searches">য়ামার সার্চ সমূহ</string>
+    <string name="my_searches">আমার সার্চ সমূহ</string>
     <string name="post_an_ad">নতুন বিজ্ঞাপন যোগ করুন</string>
     <string name="house_for_rent">ভাড়ার জন্য বাড়ি</string>
-    <string name="sms">এস এম এস</string>
+    <string name="sms">এসএমএস</string>
     <string name="call">কল করুন</string>
     <string name="project">প্রজেক্ট</string>
+    <string name="recent_search">সাম্প্রতিক সার্চ</string>
+    <string name="new_projects">নতুন প্রজেক্ট সমুহ</string>
+    <string name="new_services">নতুন সেবা সমুহ</string>
+    <string name="view_all">সব দেখুন</string>
+    <string name="latest_blogs">নতুন ব্লগ সমূহ</string>
+    <string name="property_tv">প্রোপার্টি টিভি</string>
 </resources>

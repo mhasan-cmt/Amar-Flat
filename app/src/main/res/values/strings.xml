@@ -93,4 +93,10 @@
     <string name="sms">SMS</string>
     <string name="call">Call</string>
     <string name="project">Project</string>
+    <string name="recent_search">Recent Search</string>
+    <string name="new_projects">New Projects</string>
+    <string name="new_services">New Services</string>
+    <string name="view_all">View All</string>
+    <string name="latest_blogs">Latest Blogs</string>
+    <string name="property_tv">Property Tv</string>
 </resources>

@@ -38,6 +38,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         homeBinding = ActivityHomeBinding.inflate(getLayoutInflater());
         sharedPreferences = getSharedPreferences("user_data", MODE_PRIVATE);
         setContentView(homeBinding.getRoot());
+
+//        Setting home fragment on start
+        getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container,new HomeFragment()).addToBackStack(null).commit();
+
+
         AppBarLayout.LayoutParams params = new AppBarLayout.LayoutParams(
                 AppBarLayout.LayoutParams.WRAP_CONTENT,
                 AppBarLayout.LayoutParams.WRAP_CONTENT
@@ -55,6 +60,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         View navViewHeader = homeBinding.mainNavView.getHeaderView(0);
         TextView userNameNavHeader = navViewHeader.findViewById(R.id.nav_header_userName);
 
+//        Setting user name to textview and onclick listener for profile
         userNameNavHeader.setText(sharedPreferences.getString("user_name","0"));
         userNameNavHeader.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,6 +113,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -122,11 +129,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             case R.id.nav_language:
                 if(homeBinding.mainToolbar.getTitle().equals("Amar Flat")){
                     LanguageUtil.setLanguage(this,"bn");
-                    startActivity(new Intent(this, SplashScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 }else{
                     LanguageUtil.setLanguage(this,"en");
-                    startActivity(new Intent(this, SplashScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 }
+                startActivity(new Intent(this, SplashScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 break;
             case R.id.nav_home:
                 HomeFragment homeFragment = new HomeFragment();
