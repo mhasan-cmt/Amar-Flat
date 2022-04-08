@@ -27,7 +27,7 @@ import com.teamphoenix.amarflat.util.LanguageUtil;
 
 import java.util.Locale;
 
-public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class HomeActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ActivityHomeBinding homeBinding;
     SharedPreferences sharedPreferences;
     private ProfileFragment profileFragment;
@@ -40,44 +40,48 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         setContentView(homeBinding.getRoot());
 
 //        Setting home fragment on start
-        getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container,new HomeFragment()).addToBackStack(null).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container, new HomeFragment()).addToBackStack(null).commit();
 
+        setUpDrawerLayout();
+        setUpUserData();
+        setUpBottomNavOnclick();
+        setUpHomeFabOnclick();
 
-        AppBarLayout.LayoutParams params = new AppBarLayout.LayoutParams(
-                AppBarLayout.LayoutParams.WRAP_CONTENT,
-                AppBarLayout.LayoutParams.WRAP_CONTENT
-        );
+    }
 
-        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this,
-                homeBinding.homeDrawer,
-                homeBinding.mainToolbar,
-                R.string.Open_Drawer,
-                R.string.Close_Drawer);
-        homeBinding.homeDrawer.addDrawerListener(drawerToggle);
-        drawerToggle.syncState();
-        homeBinding.mainNavView.setCheckedItem(R.id.nav_home);
-        homeBinding.mainNavView.setNavigationItemSelectedListener(this);
+    private void setUpHomeFabOnclick() {
+        homeBinding.homeSearchFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HomeActivity.this, SearchFilterActivity.class));
+            }
+        });
+    }
+
+    private void setUpUserData() {
         View navViewHeader = homeBinding.mainNavView.getHeaderView(0);
         TextView userNameNavHeader = navViewHeader.findViewById(R.id.nav_header_userName);
-
-//        Setting user name to textview and onclick listener for profile
-        userNameNavHeader.setText(sharedPreferences.getString("user_name","0"));
+        //        Setting user name to textview and onclick listener for profile
+        userNameNavHeader.setText(sharedPreferences.getString("user_name", "0"));
         userNameNavHeader.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(profileFragment==null){
+                if (profileFragment == null) {
                     profileFragment = new ProfileFragment();
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container,profileFragment).addToBackStack(null).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container, profileFragment).addToBackStack(null).commit();
 
             }
         });
+    }
+
+    private void setUpBottomNavOnclick() {
         homeBinding.navView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
                 Fragment fragment = null;
-                switch (item.getItemId()){
+                switch (item.getItemId()) {
                     case R.id.home:
                         homeBinding.imageTitle.setContentDescription("Home");
                         fragment = new HomeFragment();
@@ -95,11 +99,22 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         fragment = new ProfileFragment();
                         break;
                 }
-                getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container,fragment).addToBackStack(null).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.home_fragment_container, fragment).addToBackStack(null).commit();
                 return true;
             }
         });
+    }
 
+    private void setUpDrawerLayout() {
+        ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this,
+                homeBinding.homeDrawer,
+                homeBinding.mainToolbar,
+                R.string.Open_Drawer,
+                R.string.Close_Drawer);
+        homeBinding.homeDrawer.addDrawerListener(drawerToggle);
+        drawerToggle.syncState();
+        homeBinding.mainNavView.setCheckedItem(R.id.nav_home);
+        homeBinding.mainNavView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -116,7 +131,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_add_property:
                 startActivity(new Intent(this, PostAd.class));
                 break;
@@ -127,10 +142,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(new Intent(this, SearchFilterActivity.class));
                 break;
             case R.id.nav_language:
-                if(homeBinding.mainToolbar.getTitle().equals("Amar Flat")){
-                    LanguageUtil.setLanguage(this,"bn");
-                }else{
-                    LanguageUtil.setLanguage(this,"en");
+                if (homeBinding.mainToolbar.getTitle().equals("Amar Flat")) {
+                    LanguageUtil.setLanguage(this, "bn");
+                } else {
+                    LanguageUtil.setLanguage(this, "en");
                 }
                 startActivity(new Intent(this, SplashScreen.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK));
                 break;

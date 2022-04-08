@@ -29,6 +29,7 @@ public class SearchFilterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        overridePendingTransition(R.anim.slide_up_in, R.anim.slide_up_out);
         super.onCreate(savedInstanceState);
         searchFilterBinding = ActivitySearchFilterBinding.inflate(getLayoutInflater());
         setContentView(searchFilterBinding.getRoot());
