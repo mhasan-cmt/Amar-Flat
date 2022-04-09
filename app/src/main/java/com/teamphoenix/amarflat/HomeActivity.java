@@ -77,9 +77,11 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                         fragment = new HomeFragment();
                         break;
                     case R.id.project:
-                        homeBinding.imageTitle.setContentDescription("Project");
-                        fragment = new ProjectsFragment();
-                        break;
+//                        homeBinding.imageTitle.setContentDescription("Project");
+//                        fragment = new ProjectsFragment();
+//                        break;
+                        startActivity(new Intent(getApplicationContext(),SearchResultActivity.class));
+                        return false;
                     case R.id.favorites:
                         homeBinding.imageTitle.setContentDescription("Favorites");
                         fragment = new FavoritesFragment();

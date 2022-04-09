@@ -1,5 +1,7 @@
 package com.teamphoenix.amarflat;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
@@ -22,6 +24,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.lang.ref.ReferenceQueue;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -32,6 +35,7 @@ public class AddFeature extends AppCompatActivity {
     ArrayList<FeatureCategory> featureCategoryArrayList = new ArrayList<>();
     Map<String, ArrayList<features>> featuresArrayList = new HashMap<>();
     ExpandListViewAdapter adapter;
+    Map<String,String> featuresDataList = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +43,10 @@ public class AddFeature extends AppCompatActivity {
         addFeatureBinding = ActivityAddFeatureBinding.inflate(getLayoutInflater());
         setContentView(addFeatureBinding.getRoot());
 
-        getFeatureList();
         getFeatureCategoryList();
+
         Toast.makeText(this, Integer.toString(featureCategoryArrayList.size()), Toast.LENGTH_SHORT).show();
 
-//        features.add(new features("3","34","34","34"));
-//        features.add(new features("3","34","34","34"));
-//        features.add(new features("3","34","34","34"));
-//        features.add(new features("3","34","34","34"));
-//        featuresArrayList.put("1", features);
-//        featuresArrayList.put("2", features);
         //expandableListView
         adapter = new ExpandListViewAdapter(featureCategoryArrayList,featuresArrayList);
         addFeatureBinding.expandAbleListView.setAdapter(adapter);
@@ -77,6 +75,8 @@ public class AddFeature extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 adapter.notifyDataSetChanged();
+
+                getFeatureList();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -124,5 +124,15 @@ public class AddFeature extends AppCompatActivity {
         });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+    public void getFeatureData(Map<String,String> value){
+        featuresDataList=value;
+    }
+
+    public void done(View view) {
+        Intent intent = new Intent();
+        intent.putExtra("data", (Serializable) featuresDataList);
+        setResult(Activity.RESULT_OK,intent);
+        finish();
     }
 }

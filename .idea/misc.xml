@@ -13,12 +13,14 @@
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_post_ad.xml" value="0.22" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_post_view.xml" value="0.33" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_post_view.xml" value="0.25" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_profile_setting.xml" value="0.25" />
-        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_search_result.xml" value="0.18" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_search_filter.xml" value="0.33" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_search_result.xml" value="0.22" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/activity_splash_screen.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/child_single_view.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/features_list_with_value.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_commercial.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_favorites.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_home.xml" value="0.20416666666666666" />
@@ -29,6 +31,7 @@
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/fragment_projects.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/group_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/group_single_view.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/item_city.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/list_item_demo.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/nav_header.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/MY/AndroidStudioProjects/Amar-Flat/app/src/main/res/layout/property_single_type.xml" value="0.25" />

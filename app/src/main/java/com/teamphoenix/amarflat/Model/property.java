@@ -1,6 +1,8 @@
 package com.teamphoenix.amarflat.Model;
 
-public class property {
+import java.io.Serializable;
+
+public class property implements Serializable {
     String property_id;
     String title;
     String location;
@@ -8,12 +10,15 @@ public class property {
     String bedrooms;
     String bathroom;
     String description;
-    String apartment_type;
+    String property_type;
     String purpose;
-    String floor_plan;
+    String total_price;
+    String email;
     String contact_number;
+    String user_id;
+    String time;
 
-    public property(String property_id, String title, String location, String area_size, String bedrooms, String bathroom, String description, String apartment_type, String purpose, String floor_plan, String contact_number) {
+    public property(String property_id, String title, String location, String area_size, String bedrooms, String bathroom, String description, String property_type, String purpose, String total_price, String email, String contact_number, String user_id, String time) {
         this.property_id = property_id;
         this.title = title;
         this.location = location;
@@ -21,10 +26,13 @@ public class property {
         this.bedrooms = bedrooms;
         this.bathroom = bathroom;
         this.description = description;
-        this.apartment_type = apartment_type;
+        this.property_type = property_type;
         this.purpose = purpose;
-        this.floor_plan = floor_plan;
+        this.total_price = total_price;
+        this.email = email;
         this.contact_number = contact_number;
+        this.user_id = user_id;
+        this.time = time;
     }
 
     public String getProperty_id() {
@@ -83,12 +91,12 @@ public class property {
         this.description = description;
     }
 
-    public String getApartment_type() {
-        return apartment_type;
+    public String getProperty_type() {
+        return property_type;
     }
 
-    public void setApartment_type(String apartment_type) {
-        this.apartment_type = apartment_type;
+    public void setProperty_type(String property_type) {
+        this.property_type = property_type;
     }
 
     public String getPurpose() {
@@ -99,12 +107,20 @@ public class property {
         this.purpose = purpose;
     }
 
-    public String getFloor_plan() {
-        return floor_plan;
+    public String getTotal_price() {
+        return total_price;
     }
 
-    public void setFloor_plan(String floor_plan) {
-        this.floor_plan = floor_plan;
+    public void setTotal_price(String total_price) {
+        this.total_price = total_price;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getContact_number() {
@@ -113,5 +129,21 @@ public class property {
 
     public void setContact_number(String contact_number) {
         this.contact_number = contact_number;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 }

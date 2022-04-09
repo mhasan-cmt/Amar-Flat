@@ -27,14 +27,15 @@ public class HomesFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
+    String propertyType="";
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        propertyType = "House";
+        ((PostAd)getActivity()).getProperyType(propertyType);
         homesBinding.homesRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                String propertyType="";
                 if (homesBinding.house.isChecked()){
                     propertyType = "House";
                 }else if (homesBinding.flat.isChecked()){

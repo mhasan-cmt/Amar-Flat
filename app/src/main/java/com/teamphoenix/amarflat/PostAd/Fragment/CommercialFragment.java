@@ -26,14 +26,15 @@ public class CommercialFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
+    String propertyType="";
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        propertyType = "Office";
+        ((PostAd)getActivity()).getProperyType(propertyType);
         commercialBinding.commercialRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                String propertyType="";
                 if (commercialBinding.office.isChecked()){
                     propertyType = "Office";
                 }else if (commercialBinding.shop.isChecked()){

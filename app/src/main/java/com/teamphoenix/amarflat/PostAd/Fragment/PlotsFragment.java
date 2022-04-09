@@ -29,14 +29,15 @@ public class PlotsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
-
+    String propertyType="";
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        propertyType = "Residential Plot";
+        ((PostAd)getActivity()).getProperyType(propertyType);
         plotsBinding.plotsRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                String propertyType="";
                 if (plotsBinding.residentialPlot.isChecked()){
                     propertyType = "Residential Plot";
                 }else if (plotsBinding.commercialPlot.isChecked()){

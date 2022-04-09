@@ -746,16 +746,10 @@
                     android:paddingBottom="15dp"
                     android:weightSum="4">
 
-                    <EditText
-                        android:id="@+id/propertyFeatures"
-                        android:layout_width="0dp"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="4"
-                        android:background="@drawable/bottom_border"
-                        android:drawableTint="@color/white_gray"
-                        android:hint="@string/hint_describe_your_property_in_detail"
-                        android:paddingBottom="5dp" />
-
+                        android:id="@+id/featureShowRecyclerView"/>
                 </LinearLayout>
             </LinearLayout>
 

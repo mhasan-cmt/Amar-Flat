@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.util.Base64;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
@@ -28,14 +30,21 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.tabs.TabLayout;
+import com.teamphoenix.amarflat.Adapter.FeaturesNameValueLIstAdapter;
 import com.teamphoenix.amarflat.Adapter.PostAdPhotoViewRecycler;
 import com.teamphoenix.amarflat.AddFeature;
+import com.teamphoenix.amarflat.Model.FeatureNameValue;
 import com.teamphoenix.amarflat.PostAd.Fragment.CommercialFragment;
 import com.teamphoenix.amarflat.PostAd.Fragment.HomesFragment;
 import com.teamphoenix.amarflat.PostAd.Fragment.PlotsFragment;
 import com.teamphoenix.amarflat.R;
 import com.teamphoenix.amarflat.databinding.ActivityPostAdBinding;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -45,14 +54,15 @@ public class PostAd extends AppCompatActivity {
     Spinner size_type;
     ArrayList<String> sizeTypeList;
     ActivityResultLauncher<Intent> activityResultLauncher;
-    Uri path;
-    Bitmap bitmap;
     RecyclerView imageRecyclerView;
     ArrayList<Uri> postAdImageList;
+    ArrayList<Bitmap> postAdImageListBitmap;
+    ArrayList<FeatureNameValue> featureNameValueArrayList = new ArrayList<>();
     SharedPreferences preferences;
     SharedPreferences.Editor editor;
     private ActivityPostAdBinding postAdBinding;
     String propertyType="";
+
 
     @Override
     public void onBackPressed() {
@@ -82,9 +92,12 @@ public class PostAd extends AppCompatActivity {
         postAdBinding.featureAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),AddFeature.class));
+                Intent intent = new Intent(getApplicationContext(),AddFeature.class);
+                startActivityForResult(intent,1111);
             }
         });
+
+        getSupportFragmentManager().beginTransaction().replace(R.id.propertyTypeFrame,new HomesFragment()).addToBackStack(null).commit();
 
         //property type
         postAdBinding.propertyTypeTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -134,6 +147,7 @@ public class PostAd extends AppCompatActivity {
         //recyclerView
         imageRecyclerView = findViewById(R.id.imageRecyclerView);
         postAdImageList = new ArrayList<>();
+        postAdImageListBitmap = new ArrayList<>();
         PostAdPhotoViewRecycler postAdPhotoViewAdapter = new PostAdPhotoViewRecycler(getApplicationContext(), postAdImageList);
         imageRecyclerView.setAdapter(postAdPhotoViewAdapter);
         imageRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -146,12 +160,41 @@ public class PostAd extends AppCompatActivity {
                 if (result != null) {
                     for (int i = 0; i < result.getData().getClipData().getItemCount(); i++) {
                         postAdImageList.add(result.getData().getClipData().getItemAt(i).getUri());
+                        Bitmap bitmap = null;
+                        try {
+                            bitmap = Bitmap.createBitmap(MediaStore.Images.Media.getBitmap(getContentResolver(),result.getData().getClipData().getItemAt(i).getUri()));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        postAdImageListBitmap.add(bitmap);
                     }
                     postAdPhotoViewAdapter.notifyDataSetChanged();
                 }
             }
         });
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        ArrayList<FeatureNameValue> arrayList = new ArrayList<>();
+        if (requestCode==1111 && resultCode==RESULT_OK){
+            Map<String, String> getList = new HashMap<>();
+            getList = (Map<String, String>) data.getSerializableExtra("data");
+            for ( Map.Entry<String, String> entry : getList.entrySet()) {
+                String key = entry.getKey();
+                String getData = entry.getValue();
+                arrayList.add(new FeatureNameValue(key,getData));
+            }
+            setFeatureRecyclerView(arrayList);
+        }
+    }
+
+    public void setFeatureRecyclerView(ArrayList<FeatureNameValue> value){
+        featureNameValueArrayList = value;
+        postAdBinding.featureShowRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        FeaturesNameValueLIstAdapter adapter = new FeaturesNameValueLIstAdapter(getApplicationContext(),value);
+        postAdBinding.featureShowRecyclerView.setAdapter(adapter);
     }
 
     public void postAd(View view) {
@@ -165,7 +208,6 @@ public class PostAd extends AppCompatActivity {
 
 
 
-        Toast.makeText(this, Integer.toString(postAdBinding.bathroomRadio.getCheckedRadioButtonId()), Toast.LENGTH_SHORT).show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "https://sloppy-mattress.000webhostapp.com/API/postAd.php", new Response.Listener<String>() {
             @Override
@@ -190,17 +232,38 @@ public class PostAd extends AppCompatActivity {
                 perms.put("bedrooms",getBedroom());
                 perms.put("bathrooms",getBathroom());
                 perms.put("description",postAdBinding.propertyDescription.getText().toString());
-                perms.put("property_type","Flat");
+                perms.put("property_type",propertyType);
                 perms.put("purpose",getPurpose());
                 perms.put("total_price",postAdBinding.totalPrice.getText().toString());
                 perms.put("email",postAdBinding.email.getText().toString());
                 perms.put("phone",postAdBinding.phone.getText().toString());
                 perms.put("user_id",preferences.getString("user_id","0"));
+
+                Map<String, String> map = new HashMap<>();
+
+                for (int i = 0; i<featureNameValueArrayList.size(); i++){
+                    map.put(featureNameValueArrayList.get(i).getFeatureName(),featureNameValueArrayList.get(i).getFeatureValue());
+                }
+                JSONObject jsonObject = new JSONObject(map);
+                perms.put("features",jsonObject.toString());
+
+                JSONArray care_type = new JSONArray();
+                for(int i=0; i < postAdImageListBitmap.size(); i++) {
+                    care_type.put(getBitmapToString(postAdImageListBitmap.get(i)));
+                }
+                perms.put("arr",care_type.toString());
                 return perms;
             }
         };
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
+    }
+
+    private String getBitmapToString(Bitmap bitmap) {
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG,50,byteArrayOutputStream);
+        byte[] bytes = byteArrayOutputStream.toByteArray();
+        return Base64.encodeToString(bytes,Base64.DEFAULT);
     }
 
     private String getPurpose() {
@@ -220,7 +283,7 @@ public class PostAd extends AppCompatActivity {
             return "3";
         else if(postAdBinding.bathroom4.isChecked())
             return "4";
-        return "0";
+        return "";
     }
 
     private String getBedroom() {
@@ -232,7 +295,7 @@ public class PostAd extends AppCompatActivity {
             return "3";
         else if(postAdBinding.bedroom4.isChecked())
             return "4";
-        return "0";
+        return "";
     }
 
     public void picAdd(View view) {
